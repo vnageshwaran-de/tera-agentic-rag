@@ -1,0 +1,105 @@
+id,bibkey,title,first_author,year,venue,source_type,peer_reviewed,doi_or_arxiv,rq_coverage,tera_layers,tera_concerns,quality_score,full_text_reviewed,decision,notes
+1,lewis2020rag,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,Lewis,2020,NeurIPS,journal/conference,yes,arXiv:2005.11401,RQ1;RQ2,L1;L2,,15,abstract-only,include,Foundational anchor citation
+2,karpukhin2020dpr,Dense Passage Retrieval for Open-Domain Question Answering,Karpukhin,2020,EMNLP,conference,yes,arXiv:2004.04906,RQ1;RQ2,L2,,14,abstract-only,include,Dense retrieval anchor
+3,gao2024ragsurvey,Retrieval-Augmented Generation for Large Language Models: A Survey,Gao,2024,arXiv,preprint,no,arXiv:2312.10997,RQ1;RQ2;RQ3,L1;L2,C2,14,full-text,include,Most-cited recent RAG survey
+4,gao2024modularrag,Modular RAG: Transforming RAG Systems into LEGO-like Reconfigurable Frameworks,Gao,2024,arXiv,preprint,no,arXiv:2407.21059,RQ1,L1;L2,,12,full-text,include,Architectural taxonomy
+5,singh2025agenticragsurvey,Agentic RAG: A Survey on Agentic RAG,Singh,2025,arXiv,preprint,no,arXiv:2501.09136,RQ1;RQ2;RQ6,L2;L3;L4;L5,C2;C4,14,full-text,include,Closest competitor; differentiate
+6,ragreasoning2025acl,Reasoning Agentic RAG (ACL Findings IJCNLP),N/A,2025,ACL Findings,conference,yes,N/A,RQ2,L2;L3,,13,abstract-only,include,Peer-reviewed
+7,ragdeepreasoning2025,Towards Agentic RAG with Deep Reasoning: A Survey,N/A,2025,arXiv,preprint,no,arXiv:2507.09477,RQ2,L2;L3,,11,metadata-only,include,Verify authors before submission
+8,ragcomprehensive2025,RAG Comprehensive Survey: Architectures Enhancements Robustness,N/A,2025,arXiv,preprint,no,arXiv:2506.00054,RQ1;RQ4,L1;L2,C1,12,full-text,include,Robustness focus
+9,ragcomprehensive2024,Comprehensive Survey of RAG: Evolution Current Landscape,N/A,2024,arXiv,preprint,no,arXiv:2410.12837,RQ1,L1;L2,,11,full-text,include,Evolutionary view
+10,asai2024selfrag,Self-RAG: Learning to Retrieve Generate and Critique through Self-Reflection,Asai,2024,ICLR,conference,yes,arXiv:2310.11511,RQ1;RQ2,L2;L3,,15,full-text,include,Self-reflective RAG anchor
+11,edge2024graphrag,From Local to Global: A Graph RAG Approach to Query-Focused Summarization,Edge,2024,arXiv (Microsoft),preprint,no,arXiv:2404.16130,RQ1;RQ2,L1;L2,,14,full-text,include,GraphRAG anchor
+12,graphrag2024ieee,Graph Retrieval-Augmented Generation for LLMs: A Survey,N/A,2024,IEEE Xplore,conference,yes,doc 10771030,RQ1,L1;L2,,12,metadata-only,include,Verify full text via IEEE access
+13,yao2023react,ReAct: Synergizing Reasoning and Acting in Language Models,Yao,2023,ICLR,conference,yes,arXiv:2210.03629,RQ2,L3;L4,,15,abstract-only,include,Foundational reasoning+action
+14,schick2023toolformer,Toolformer: Language Models Can Teach Themselves to Use Tools,Schick,2023,NeurIPS,conference,yes,arXiv:2302.04761,RQ2,L4,,14,abstract-only,include,Foundational tool use
+15,shinn2023reflexion,Reflexion: Language Agents with Verbal Reinforcement Learning,Shinn,2023,NeurIPS,conference,yes,arXiv:2303.11366,RQ2,L3,,14,full-text,include,Self-reflection anchor
+16,wang2024voyager,Voyager: An Open-Ended Embodied Agent with LLMs,Wang,2023,arXiv (NeurIPS-related),preprint,no,arXiv:2305.16291,RQ2,L3;L4,,12,abstract-only,include,Lifelong learning agent
+17,wang2023autonomousagentsurvey,A Survey on LLM Based Autonomous Agents,Wang,2023,arXiv,preprint,no,arXiv:2308.11432,RQ1;RQ2,L3;L4;L5,,13,full-text,include,Autonomous agent survey anchor
+18,wu2024autogen,AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation,Wu,2024,COLM 2024,conference,yes,arXiv:2308.08155,RQ1,L5,,14,full-text,include,Multi-agent framework anchor
+19,guo2024multiagent,LLM-based Multi-Agents: A Survey of Progress and Challenges,Guo,2024,IJCAI,conference,yes,N/A,RQ1,L5,,13,metadata-only,include,Verify full author list
+20,multiagent2412survey,A Survey on LLM-based Multi-Agent System,N/A,2024,arXiv,preprint,no,arXiv:2412.17481,RQ1,L5,,11,full-text,include,Verify authors
+21,agentopt2025csur,Survey on the Optimization of LLM-based Agents,N/A,2025,ACM CSUR,journal,yes,10.1145/3789261,RQ2;RQ3,L3;L4,,15,metadata-only,include,Top-tier journal; verify authors
+22,agenticreasoning2025,LLM-Based Agentic Reasoning Frameworks: A Survey,N/A,2025,arXiv,preprint,no,arXiv:2508.17692,RQ2,L3,,11,abstract-only,include,Verify authors
+23,esragas2024,RAGAS: Automated Evaluation of Retrieval Augmented Generation,Es,2024,EACL Demos,conference,yes,N/A,RQ3,L1;L2,C2,14,full-text,include,Reference-free RAG eval anchor
+24,saadfalcon2024ares,ARES: An Automated Evaluation Framework for RAG Systems,Saad-Falcon,2024,NAACL,conference,yes,arXiv:2311.09476,RQ3,L1;L2,C2,15,full-text,include,Automated RAG eval anchor
+25,yu2024ragevalsurvey,Evaluation of Retrieval-Augmented Generation: A Survey,Yu,2024,arXiv,preprint,no,arXiv:2405.07437,RQ3,L1;L2,C2,12,full-text,include,RAG eval survey
+26,liu2024agentbench,AgentBench: Evaluating LLMs as Agents,Liu,2024,ICLR,conference,yes,arXiv:2308.03688,RQ3,L3;L4;L5,C2,15,full-text,include,Multi-environment agent benchmark
+27,mialon2023gaia,GAIA: A Benchmark for General AI Assistants,Mialon,2023,arXiv,preprint,no,arXiv:2311.12983,RQ3,L3;L4,C2,13,abstract-only,include,General AI assistant benchmark
+28,jimenez2024swebench,SWE-bench: Can Language Models Resolve Real-World GitHub Issues,Jimenez,2024,ICLR,conference,yes,arXiv:2310.06770,RQ3,L4,C2,14,abstract-only,include,Software engineering benchmark
+29,qin2023toolllm,ToolLLM: Facilitating LLMs to Master 16000+ Real-World APIs,Qin,2023,arXiv,preprint,no,arXiv:2307.16789,RQ3,L4,C2,13,abstract-only,include,Tool use benchmark
+30,patil2025bfcl,Berkeley Function Calling Leaderboard (BFCL),Patil,2025,ICML,conference,yes,N/A,RQ3,L4,C2,15,full-text,include,Function-call evaluation anchor
+31,mohammadi2025agenteval,Evaluation and Benchmarking of LLM Agents: A Survey,Mohammadi,2025,KDD 2025,conference,yes,10.1145/3711896.3736570,RQ3,L3;L4;L5,C2,14,full-text,include,Direct competitor on eval
+32,agenteval2503survey,A Survey on Evaluation of LLM-based Agents,N/A,2025,arXiv,preprint,no,arXiv:2503.16416,RQ3,L3;L4,C2,12,full-text,include,Verify authors
+33,liang2023helm,Holistic Evaluation of Language Models (HELM),Liang,2023,TMLR,journal,yes,arXiv:2211.09110,RQ3,L0-L5,C2,15,full-text,include,Multi-metric LLM eval anchor
+34,thakur2021beir,BEIR: A Heterogeneous Benchmark for Zero-Shot IR,Thakur,2021,NeurIPS Datasets,conference,yes,arXiv:2104.08663,RQ3,L2,C2,14,abstract-only,include,Foundational IR benchmark
+35,muennighoff2023mteb,MTEB: Massive Text Embedding Benchmark,Muennighoff,2023,EACL,conference,yes,N/A,RQ3,L1;L2,C2,14,full-text,include,Embedding benchmark anchor
+36,huang2024hallucinationsurvey,Survey on Hallucination in LLMs,Huang,2024,ACM TOIS,journal,yes,10.1145/3703155,RQ3;RQ4,L3,C1;C2,15,full-text,include,Top-tier hallucination survey
+37,lin2022truthfulqa,TruthfulQA,Lin,2022,ACL,conference,yes,arXiv:2109.07958,RQ3,L3,C2,14,abstract-only,include,Factuality benchmark
+38,li2023halueval,HaluEval: Hallucination Evaluation Benchmark for LLMs,Li,2023,EMNLP,conference,yes,arXiv:2305.11747,RQ3,L3,C2,13,abstract-only,include,Hallucination benchmark
+39,min2023factscore,FActScore: Fine-Grained Atomic Evaluation of Factual Precision,Min,2023,EMNLP,conference,yes,arXiv:2305.14251,RQ3,L3,C2,14,abstract-only,include,Atomic factuality metric
+40,greshake2023indirectinjection,Not What You've Signed Up For: Indirect Prompt Injection,Greshake,2023,AISec'23,workshop,yes,10.1145/3605764.3623985,RQ4,L1;L2;L3;L4,C1,15,full-text,include,Foundational indirect injection
+41,zou2025poisonedrag,PoisonedRAG: Knowledge Corruption Attacks to RAG of LLMs,Zou,2025,USENIX Security,conference,yes,arXiv:2402.07867,RQ4,L1;L2,C1,15,full-text,include,Foundational RAG poisoning; top-tier
+42,yi2024jailbreaksurvey,Jailbreak Attacks and Defenses Against LLMs: A Survey,Yi,2024,arXiv,preprint,no,arXiv:2407.04295,RQ4,L3;L4,C1,12,full-text,include,Comprehensive jailbreak survey
+43,promptinjectionsurvey2026sd,Prompt Injection Attacks on LLMs: Survey,N/A,2025,Elsevier,journal,yes,N/A,RQ4,L1;L2;L3;L4,C1,13,metadata-only,include,Verify authors and full text
+44,promptinjectionreview2026mdpi,Prompt Injection Attacks in LLMs and AI Agent Systems,N/A,2026,MDPI Information,journal,yes,N/A,RQ4,L1;L2;L3;L4,C1,13,full-text,include,Open-access review
+45,threatsdefenses2025acm,Threats and Defenses for LLMs: A Survey,N/A,2025,ACM CISAI,conference,yes,10.1145/3773365.3773631,RQ4,L0-L5,C1,12,metadata-only,include,Verify authors
+46,zhang2025agentsecuritybench,Agent Security Bench (ASB),Zhang,2025,ICLR,conference,yes,arXiv:2410.02644,RQ3;RQ4,L3;L4;L5,C1;C2,15,full-text,include,Top-tier agent security benchmark
+47,debenedetti2024agentdojo,AgentDojo: Dynamic Environment to Evaluate Prompt Injection,Debenedetti,2024,NeurIPS Datasets,conference,yes,arXiv:2406.13352,RQ4,L4,C1;C2,15,full-text,include,Top-tier; tool-using agent injection
+48,zhan2024injecagent,InjecAgent: Benchmarking Indirect Prompt Injections,Zhan,2024,arXiv,preprint,no,arXiv:2403.02691,RQ4,L4,C1,13,abstract-only,include,Indirect injection benchmark
+49,chen2024agentpoison,AgentPoison: Red-Teaming LLM Agents via Poisoning Memory or KB,Chen,2024,NeurIPS,conference,yes,N/A,RQ4,L1;L3,C1,15,full-text,include,Memory and KB poisoning
+50,memorypoisoning2026arxiv,Memory Poisoning Attack and Defense on Memory-Based LLM Agents,N/A,2026,arXiv,preprint,no,arXiv:2601.05504,RQ4,L3,C1,11,abstract-only,include,Recent; verify authors
+51,memorygraft2025,MemoryGraft: Persistent Compromise via Poisoned Experience Retrieval,N/A,2025,arXiv,preprint,no,arXiv:2512.16962,RQ4,L3,C1,11,abstract-only,include,Recent; verify authors
+52,agenticsecurity2510survey,A Survey on Agentic Security: Applications Threats and Defenses,N/A,2025,arXiv,preprint,no,arXiv:2510.06445,RQ4,L0-L5,C1,12,abstract-only,include,Recent agent security survey
+53,embeddinginversion2024arxiv,Mitigating Privacy Risks in LLM Embeddings from Embedding Inversion,N/A,2024,arXiv,preprint,no,arXiv:2411.05034,RQ4,L1;L2,C1,11,abstract-only,include,Embedding privacy
+54,embeddinginversion2024multilingual,Text Embedding Inversion Security for Multilingual LMs,N/A,2024,arXiv,preprint,no,arXiv:2401.12192,RQ4,L1;L2,C1,11,abstract-only,include,Embedding security
+55,transferableinversion2024,Transferable Embedding Inversion Attack,N/A,2024,arXiv,preprint,no,arXiv:2406.10280,RQ4,L1;L2,C1,11,abstract-only,include,Black-box embedding inversion
+56,rebedea2023nemoguardrails,NeMo Guardrails: Toolkit for Controllable and Safe LLM Applications,Rebedea,2023,EMNLP Demos,conference,yes,arXiv:2310.10501,RQ4;RQ5,L4;L5,C1,14,full-text,include,Programmable guardrails
+57,inan2023llamaguard,Llama Guard: LLM-Based Input-Output Safeguard,Inan,2023,arXiv (Meta),preprint,no,arXiv:2312.06674,RQ4,L4,C1,13,abstract-only,include,Safety classifier
+58,bai2022constitutionalai,Constitutional AI: Harmlessness from AI Feedback,Bai,2022,arXiv (Anthropic),preprint,no,arXiv:2212.08073,RQ4;RQ5,L3,C1,14,full-text,include,Anchor for principled alignment
+59,nist2024genaiprofile,AI Risk Management Framework: GenAI Profile (AI 600-1),NIST,2024,NIST,standard,n/a,N/A,RQ5;RQ6,L0-L5,C4,15,full-text,include,Normative governance anchor
+60,nist2024ssdfgenai,Secure Software Development Practices for GenAI (SP 800-218A),NIST,2024,NIST,standard,n/a,N/A,RQ4;RQ5,L0-L5,C1;C5,14,full-text,include,Normative SSDF for GenAI
+61,owasp2025llmtop10,OWASP Top 10 for LLM Applications v2025,OWASP,2025,OWASP,standard,n/a,N/A,RQ4,L1-L5,C1,15,full-text,include,Normative threat catalogue
+62,owasp2025agentictop10,OWASP Top 10 for Agentic Applications,OWASP,2025,OWASP,standard,n/a,N/A,RQ4;RQ5,L3;L4;L5,C1;C4,15,full-text,include,Normative; agentic-specific
+63,csa2025agenticprofile,NIST AI RMF Agentic Profile v1 (CSA),CSA,2025,CSA,white paper,n/a,N/A,RQ5;RQ6,L0-L5,C4,13,full-text,include,Working draft
+64,iso420012023,ISO/IEC 42001:2023 AI Management System,ISO,2023,ISO,standard,n/a,N/A,RQ5,L0-L5,C4,14,abstract-only,include,Normative; abstract level only
+65,euaiact2024,EU AI Act (Regulation 2024/1689),EU,2024,EU,regulation,n/a,N/A,RQ5,L0-L5,C4,15,full-text,include,Regulatory; high-risk + GPAI
+66,trism2025agentic,TRiSM for Agentic AI: A Review,N/A,2025,arXiv (also Elsevier appearance),preprint,no,arXiv:2506.04133,RQ4;RQ5;RQ6,L3;L4;L5,C1;C4,14,full-text,include,Direct adjacency to TERA
+67,anthropic2024mcp,Model Context Protocol,Anthropic,2024,industry,industry,n/a,N/A,RQ1;RQ2,L4,C5,12,full-text,include,Industry protocol; MCP
+68,otel2024genai,OpenTelemetry GenAI Semantic Conventions,OTel,2024,industry,industry,n/a,N/A,RQ5,L0-L5,C3,13,full-text,include,Observability industry standard
+69,mdpi2025mlopstoLlmops,Transitioning from MLOps to LLMOps,N/A,2025,MDPI Information,journal,yes,N/A,RQ5,L0;L5,C5,12,full-text,include,Peer-reviewed LLMOps analysis
+70,llmopsreview2025,LLMOps AgentOps and MLOps for GenAI: A Comprehensive Review,N/A,2025,verify,verify,verify,N/A,RQ5,L0-L5,C5,11,metadata-only,include,Verify venue; possibly preprint
+71,ragenterprise2026mdpi,RAG and LLMs for Enterprise Knowledge Management: SLR,N/A,2026,MDPI Applied Sciences,journal,yes,N/A,RQ1;RQ5,L1;L2;L5,C2,12,abstract-only,include,Enterprise RAG SLR
+72,liu2024promptinjectionbench,Formalizing and Benchmarking Prompt Injection Attacks and Defenses,Liu,2024,USENIX Security,conference,yes,N/A,RQ4,L1;L2;L3;L4,C1,14,abstract-only,include,Top-tier; verify exact authors
+73,shafran2025jamming,Machine Against the RAG: Jamming RAG with Blocker Documents,Shafran,2025,USENIX Security,conference,yes,N/A,RQ4,L1;L2,C1,15,full-text,include,Top-tier; jamming attack
+74,ayzenshteyn2025cloakhoneytrap,Cloak Honey Trap: Proactive Defenses Against LLM Agents,Ayzenshteyn,2025,USENIX Security,conference,yes,N/A,RQ4,L4,C1,14,full-text,include,Top-tier; agent defenses
+75,chen2025struq,StruQ: Defending Against Prompt Injection with Structured Queries,Chen,2025,USENIX Security,conference,yes,N/A,RQ4,L4,C1,14,full-text,include,Top-tier; structured-query defense
+76,jbshield2025,JBShield: Defending LLMs from Jailbreak via Activated Concept Analysis,N/A,2025,USENIX Security,conference,yes,N/A,RQ4,L3,C1,13,abstract-only,include,Top-tier; verify authors
+77,datasentinel2025sp,DataSentinel: Game-Theoretic Detection of Prompt Injection,Liu,2025,IEEE S&P,conference,yes,N/A,RQ4,L1;L4,C1,15,abstract-only,include,Top-tier; verify full bib record
+78,promptlocate2026sp,PromptLocate: Localizing Prompt Injection Attacks,N/A,2026,IEEE S&P,conference,yes,N/A,RQ4,L4,C1,13,metadata-only,include,Top-tier accepted; verify
+79,shi2024optprompt,Optimization-based Prompt Injection Attack to LLM-as-a-Judge,Shi,2024,ACM CCS,conference,yes,10.1145/3658644,RQ4,L4,C1;C2,14,abstract-only,include,Top-tier; LLM-as-judge injection
+80,pleak2024ccs,PLeak: Prompt Leaking Attacks against LLM Applications,Hui,2024,ACM CCS,conference,yes,10.1145/3658644,RQ4,L3,C1,14,abstract-only,include,Top-tier; prompt leakage
+81,deng2024masterkey,MASTERKEY: Automated Jailbreaking of LLM Chatbots,Deng,2024,NDSS,conference,yes,N/A,RQ4,L3,C1,14,full-text,include,Top-tier; automated jailbreak
+82,liu2025propertygpt,PropertyGPT: LLM-driven Formal Verification of Smart Contracts via RAG,Liu,2025,NDSS,conference,yes,N/A,RQ1;RQ2,L1;L2,,12,abstract-only,include,RAG application paper
+83,phantombackdoor2024,Phantom: General Backdoor Attacks on RAG,Chaudhari,2024,arXiv,preprint,no,arXiv:2405.20485,RQ4,L1;L2,C1,13,full-text,include,Backdoor attack on RAG
+84,backdooredretrievers2024,Backdoored Retrievers for Prompt Injection Attacks on RAG,N/A,2024,arXiv,preprint,no,arXiv:2410.14479,RQ4,L2,C1,12,abstract-only,include,Verify authors
+85,aiagentsthreat2025acm,AI Agents Under Threat: Survey of Key Security Challenges,N/A,2025,ACM Computing Surveys,journal,yes,10.1145/3716628,RQ4,L0-L5,C1,14,full-text,include,Top-tier journal
+86,llmagentsecurity2025sciencedirect,Security of LLM-based Agents: Comprehensive Survey,N/A,2025,Information Fusion (Elsevier),journal,yes,N/A,RQ4,L0-L5,C1,13,metadata-only,include,Verify authors and full text
+87,hong2024metagpt,MetaGPT: Meta Programming for Multi-Agent Collaborative Framework,Hong,2024,ICLR Oral,conference,yes,arXiv:2308.00352,RQ1;RQ2,L5,,15,full-text,include,ICLR Oral; multi-agent SE
+88,qian2024chatdev,ChatDev: Communicative Agents for Software Development,Qian,2024,ACL,conference,yes,N/A,RQ1,L5,,14,full-text,include,Multi-agent SE; ACL
+89,xie2024osworld,OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks,Xie,2024,NeurIPS Datasets,conference,yes,arXiv:2404.07972,RQ3,L4;L5,C2,15,full-text,include,Top-tier; computer-use benchmark
+90,zhou2024webarena,WebArena: Realistic Web Environment for Autonomous Agents,Zhou,2024,ICLR,conference,yes,arXiv:2307.13854,RQ3,L4,C2,14,abstract-only,include,Top-tier; web-agent benchmark
+91,wu2024synccheck,Synchronous Faithfulness Monitoring for Trustworthy RALMs,Wu,2024,EMNLP,conference,yes,N/A,RQ3,L2;L3,C2,13,full-text,include,Real-time RAG faithfulness
+92,groundedness2024longform,Groundedness in RAG Long-Form Generation: Empirical Study,N/A,2024,arXiv,preprint,no,arXiv:2404.07060,RQ3,L2;L3,C2,12,full-text,include,Empirical groundedness
+93,khattab2020colbert,ColBERT: Efficient Effective Passage Search via Contextualized Late Interaction over BERT,Khattab,2020,SIGIR,conference,yes,arXiv:2004.12832,RQ1;RQ2,L2,,14,abstract-only,include,Late-interaction retriever anchor
+94,wang2024e5,Text Embeddings by Weakly-Supervised Contrastive Pre-training (E5),Wang,2022,arXiv (Microsoft),preprint,no,arXiv:2212.03533,RQ1;RQ2,L1,,12,abstract-only,include,E5 retriever
+95,chen2024bgem3,BGE M3-Embedding: Multi-Lingual Multi-Functionality Multi-Granularity Embeddings,Chen,2024,arXiv (BAAI),preprint,no,arXiv:2402.03216,RQ1;RQ2,L1,,12,abstract-only,include,BGE-M3 retriever
+96,naveed2023llmsurvey,A Comprehensive Overview of Large Language Models,Naveed,2023,arXiv,preprint,no,arXiv:2307.06435,Background,All,,12,abstract-only,include,General LLM survey
+97,zhao2023llmsurvey,A Survey of Large Language Models,Zhao,2023,arXiv,preprint,no,arXiv:2303.18223,Background,All,,14,abstract-only,include,Heavily cited general LLM survey
+98,minaee2024llmsurvey,Large Language Models: A Survey,Minaee,2024,arXiv,preprint,no,arXiv:2402.06196,Background,All,,12,abstract-only,include,LLM family survey
+99,sapkota2025aivsagentic,AI Agents vs Agentic AI: Conceptual Taxonomy Applications and Challenges,Sapkota,2025,Information Fusion (Elsevier),journal,yes,N/A,RQ1,All,,14,abstract-only,include,Agentic AI taxonomy peer-reviewed
+100,springer2025agenticarchitectures,Agentic AI Systems in the Age of Generative Models: Architectures Cloud Scalability Real-World Apps,N/A,2025,Springer AI Review,journal,yes,10.1007/s10462-025-11458-6,RQ1;RQ5,L0-L5,,14,abstract-only,include,Direct adjacency to TERA cloud aspects
+101,ailuminate2025,AILuminate v1.0: AI Risk and Reliability Benchmark,N/A,2025,arXiv (MLCommons),preprint,no,arXiv:2503.05731,RQ3;RQ4,L3,C1;C2,13,full-text,include,Industry standard
+102,mazeika2024harmbench,HarmBench: Standardized Evaluation Framework for Automated Red Teaming,Mazeika,2024,ICML,conference,yes,arXiv:2402.04249,RQ4,L3,C1,14,abstract-only,include,Top-tier red-team benchmark
+103,hitl2025entropy,Human-in-the-Loop AI: Systematic Review of Concepts Methods Applications,N/A,2026,Entropy (MDPI),journal,yes,N/A,RQ5,L5,C4,12,full-text,include,HITL systematic review
+104,csa2025aicm,CSA AI Controls Matrix (AICM),CSA,2025,industry,white paper,n/a,N/A,RQ5,L0-L5,C4,14,full-text,include,243 controls mapped to ISO/NIST

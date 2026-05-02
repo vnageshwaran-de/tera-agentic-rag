@@ -1,0 +1,1523 @@
+% =============================================================
+% Selected references for "Trustworthy Agentic RAG for Enterprise AI"
+% IEEE Access survey article. Author: Vinoth Nageshwaran.
+% Compiled from systematic searches per Phase 3 protocol.
+%
+% Source-confidence annotation in each entry's `note` field:
+%   [O] open preprint or open HTML reviewed
+%   [A] abstract reviewed
+%   [M] publisher metadata only
+%
+% Items marked TODO require full-text verification before final
+% manuscript submission.
+% =============================================================
+
+% -------------------------------------------------------------
+% A. FOUNDATIONAL RAG AND RETRIEVAL
+% -------------------------------------------------------------
+
+@inproceedings{lewis2020rag,
+  author       = {Lewis, Patrick and Perez, Ethan and Piktus, Aleksandra and Petroni, Fabio and Karpukhin, Vladimir and Goyal, Naman and K{\"u}ttler, Heinrich and Lewis, Mike and Yih, Wen-tau and Rockt{\"a}schel, Tim and Riedel, Sebastian and Kiela, Douwe},
+  title        = {Retrieval-Augmented Generation for Knowledge-Intensive {NLP} Tasks},
+  booktitle    = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year         = {2020},
+  url          = {https://arxiv.org/abs/2005.11401},
+  note         = {[O] Foundational RAG paper}
+}
+
+@inproceedings{karpukhin2020dpr,
+  author       = {Karpukhin, Vladimir and O\u{g}uz, Barlas and Min, Sewon and Lewis, Patrick and Wu, Ledell and Edunov, Sergey and Chen, Danqi and Yih, Wen-tau},
+  title        = {Dense Passage Retrieval for Open-Domain Question Answering},
+  booktitle    = {Proc. 2020 Conf. Empirical Methods in Natural Language Processing (EMNLP)},
+  pages        = {6769--6781},
+  year         = {2020},
+  url          = {https://aclanthology.org/2020.emnlp-main.550/},
+  note         = {[O] Foundational dense retrieval}
+}
+
+@misc{gao2024ragsurvey,
+  author       = {Gao, Yunfan and Xiong, Yun and Gao, Xinyu and Jia, Kangxiang and Pan, Jinliu and Bi, Yuxi and Dai, Yi and Sun, Jiawei and Wang, Meng and Wang, Haofen},
+  title        = {Retrieval-Augmented Generation for Large Language Models: A Survey},
+  year         = {2024},
+  eprint       = {2312.10997},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2312.10997},
+  note         = {[O] Most-cited recent RAG survey; preprint}
+}
+
+@misc{gao2024modularrag,
+  author       = {Gao, Yunfan and Xiong, Yun and Wang, Meng and Wang, Haofen},
+  title        = {Modular {RAG}: Transforming {RAG} Systems into {LEGO}-like Reconfigurable Frameworks},
+  year         = {2024},
+  eprint       = {2407.21059},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2407.21059},
+  note         = {[O] Modular RAG paradigm; preprint}
+}
+
+% -------------------------------------------------------------
+% B. AGENTIC RAG (DIRECT COMPETITORS AND CORE SOURCES)
+% -------------------------------------------------------------
+
+@misc{singh2025agenticragsurvey,
+  author       = {Singh, Aditi and Ehtesham, Abul and Kumar, Saket and Khoei, Tala Talaei},
+  title        = {Agentic Retrieval-Augmented Generation: A Survey on Agentic {RAG}},
+  year         = {2025},
+  eprint       = {2501.09136},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2501.09136},
+  note         = {[O] Closest competitor; preprint}
+}
+
+@inproceedings{ragreasoning2025acl,
+  title        = {Reasoning {RAG} via System 1 or System 2: A Survey on Reasoning Agentic Retrieval-Augmented Generation for Industry Challenges},
+  booktitle    = {Findings of ACL: IJCNLP},
+  year         = {2025},
+  url          = {https://aclanthology.org/2025.findings-ijcnlp.122/},
+  note         = {[O] Peer-reviewed; complements Singh et al.}
+}
+
+@misc{ragdeepreasoning2025,
+  title        = {Towards Agentic {RAG} with Deep Reasoning: A Survey of {RAG}-Reasoning Systems in {LLM}s},
+  year         = {2025},
+  eprint       = {2507.09477},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2507.09477},
+  note         = {[M] Preprint; verify authors}
+}
+
+@misc{ragcomprehensive2025,
+  title        = {Retrieval-Augmented Generation: A Comprehensive Survey of Architectures, Enhancements, and Robustness Frontiers},
+  year         = {2025},
+  eprint       = {2506.00054},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2506.00054},
+  note         = {[O] Preprint}
+}
+
+@misc{ragcomprehensive2024,
+  title        = {A Comprehensive Survey of Retrieval-Augmented Generation ({RAG}): Evolution, Current Landscape and Future Directions},
+  year         = {2024},
+  eprint       = {2410.12837},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2410.12837},
+  note         = {[O] Preprint}
+}
+
+% -------------------------------------------------------------
+% C. RAG VARIANTS (Self-RAG, CRAG, GraphRAG)
+% -------------------------------------------------------------
+
+@inproceedings{asai2024selfrag,
+  author       = {Asai, Akari and Wu, Zeqiu and Wang, Yizhong and Sil, Avirup and Hajishirzi, Hannaneh},
+  title        = {{Self-RAG}: Learning to Retrieve, Generate, and Critique through Self-Reflection},
+  booktitle    = {Proc. Int. Conf. Learning Representations (ICLR)},
+  year         = {2024},
+  url          = {https://arxiv.org/abs/2310.11511},
+  note         = {[O] Self-reflective RAG}
+}
+
+@misc{edge2024graphrag,
+  author       = {Edge, Darren and Trinh, Ha and Cheng, Newman and Bradley, Joshua and Chao, Alex and Mody, Apurva and Truitt, Steven and Larson, Jonathan},
+  title        = {From Local to Global: A Graph {RAG} Approach to Query-Focused Summarization},
+  year         = {2024},
+  eprint       = {2404.16130},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2404.16130},
+  note         = {[O] GraphRAG (Microsoft); preprint}
+}
+
+@article{graphrag2024ieee,
+  title        = {Graph Retrieval-Augmented Generation for Large Language Models: A Survey},
+  journal      = {IEEE Xplore},
+  year         = {2024},
+  url          = {https://ieeexplore.ieee.org/document/10771030/},
+  note         = {[M] IEEE conference paper; verify full text}
+}
+
+% -------------------------------------------------------------
+% D. LLM AGENTS, REASONING, AND TOOL USE
+% -------------------------------------------------------------
+
+@inproceedings{yao2023react,
+  author       = {Yao, Shunyu and Zhao, Jeffrey and Yu, Dian and Du, Nan and Shafran, Izhak and Narasimhan, Karthik and Cao, Yuan},
+  title        = {{ReAct}: Synergizing Reasoning and Acting in Language Models},
+  booktitle    = {Proc. Int. Conf. Learning Representations (ICLR)},
+  year         = {2023},
+  url          = {https://arxiv.org/abs/2210.03629},
+  note         = {[O] Foundational reasoning+acting framework}
+}
+
+@inproceedings{schick2023toolformer,
+  author       = {Schick, Timo and Dwivedi-Yu, Jane and Dess{\`i}, Roberto and Raileanu, Roberta and Lomeli, Maria and Zettlemoyer, Luke and Cancedda, Nicola and Scialom, Thomas},
+  title        = {Toolformer: Language Models Can Teach Themselves to Use Tools},
+  booktitle    = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year         = {2023},
+  url          = {https://arxiv.org/abs/2302.04761},
+  note         = {[A] Tool-use foundational paper}
+}
+
+@inproceedings{shinn2023reflexion,
+  author       = {Shinn, Noah and Cassano, Federico and Berman, Edward and Gopinath, Ashwin and Narasimhan, Karthik and Yao, Shunyu},
+  title        = {Reflexion: Language Agents with Verbal Reinforcement Learning},
+  booktitle    = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year         = {2023},
+  url          = {https://arxiv.org/abs/2303.11366},
+  note         = {[O] Self-reflection in agents}
+}
+
+@misc{wang2024voyager,
+  author       = {Wang, Guanzhi and Xie, Yuqi and Jiang, Yunfan and Mandlekar, Ajay and Xiao, Chaowei and Zhu, Yuke and Fan, Linxi and Anandkumar, Anima},
+  title        = {Voyager: An Open-Ended Embodied Agent with Large Language Models},
+  year         = {2023},
+  eprint       = {2305.16291},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2305.16291},
+  note         = {[A] Lifelong agent learning}
+}
+
+@misc{wang2023autonomousagentsurvey,
+  author       = {Wang, Lei and Ma, Chen and Feng, Xueyang and Zhang, Zeyu and Yang, Hao and Zhang, Jingsen and Chen, Zhiyuan and Tang, Jiakai and Chen, Xu and Lin, Yankai and Zhao, Wayne Xin and Wei, Zhewei and Wen, Ji-Rong},
+  title        = {A Survey on Large Language Model Based Autonomous Agents},
+  year         = {2023},
+  eprint       = {2308.11432},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2308.11432},
+  note         = {[O] Foundational autonomous agent survey}
+}
+
+% -------------------------------------------------------------
+% E. MULTI-AGENT FRAMEWORKS AND ORCHESTRATION
+% -------------------------------------------------------------
+
+@inproceedings{wu2024autogen,
+  author       = {Wu, Qingyun and Bansal, Gagan and Zhang, Jieyu and Wu, Yiran and Zhang, Shaokun and Zhu, Erkang and Li, Beibin and Jiang, Li and Zhang, Xiaoyun and Wang, Chi},
+  title        = {{AutoGen}: Enabling Next-Gen {LLM} Applications via Multi-Agent Conversation},
+  booktitle    = {Conf. on Language Modeling (COLM)},
+  year         = {2024},
+  url          = {https://arxiv.org/abs/2308.08155},
+  note         = {[O] Multi-agent orchestration}
+}
+
+@inproceedings{guo2024multiagent,
+  author       = {Guo, Taicheng and others},
+  title        = {Large Language Model Based Multi-Agents: A Survey of Progress and Challenges},
+  booktitle    = {Proc. Int. Joint Conf. on Artificial Intelligence (IJCAI)},
+  year         = {2024},
+  url          = {https://github.com/taichengguo/LLM_MultiAgents_Survey_Papers},
+  note         = {[M] Peer-reviewed; verify authors}
+}
+
+@misc{multiagent2412survey,
+  title        = {A Survey on {LLM}-Based Multi-Agent System: Recent Advances and New Frontiers in Application},
+  year         = {2024},
+  eprint       = {2412.17481},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2412.17481},
+  note         = {[O] Preprint}
+}
+
+@article{agentopt2025csur,
+  title        = {A Survey on the Optimization of Large Language Model-Based Agents},
+  journal      = {ACM Computing Surveys},
+  year         = {2025},
+  doi          = {10.1145/3789261},
+  note         = {[M] Top-tier journal; verify authors}
+}
+
+@misc{agenticreasoning2025,
+  title        = {{LLM}-Based Agentic Reasoning Frameworks: A Survey from Methods to Scenarios},
+  year         = {2025},
+  eprint       = {2508.17692},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2508.17692},
+  note         = {[O] Preprint}
+}
+
+% -------------------------------------------------------------
+% F. EVALUATION OF RAG AND AGENTS
+% -------------------------------------------------------------
+
+@inproceedings{esragas2024,
+  author       = {Es, Shahul and James, Jithin and Espinosa-Anke, Luis and Schockaert, Steven},
+  title        = {{RAGAs}: Automated Evaluation of Retrieval Augmented Generation},
+  booktitle    = {Proc. 18th Conf. of the European Chapter of the ACL: System Demonstrations},
+  year         = {2024},
+  url          = {https://aclanthology.org/2024.eacl-demo.16/},
+  note         = {[O] Reference-free RAG evaluation}
+}
+
+@inproceedings{saadfalcon2024ares,
+  author       = {Saad-Falcon, Jon and Khattab, Omar and Potts, Christopher and Zaharia, Matei},
+  title        = {{ARES}: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems},
+  booktitle    = {Proc. 2024 Conf. North American Chapter of the ACL (NAACL)},
+  year         = {2024},
+  url          = {https://aclanthology.org/2024.naacl-long.20/},
+  note         = {[O] Automated RAG evaluation framework}
+}
+
+@misc{yu2024ragevalsurvey,
+  author       = {Yu, Hao and others},
+  title        = {Evaluation of Retrieval-Augmented Generation: A Survey},
+  year         = {2024},
+  eprint       = {2405.07437},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2405.07437},
+  note         = {[O] RAG-specific evaluation survey}
+}
+
+@inproceedings{liu2024agentbench,
+  author       = {Liu, Xiao and Yu, Hao and Zhang, Hanchen and Xu, Yifan and Lei, Xuanyu and Lai, Hanyu and Gu, Yu and Ding, Hangliang and Men, Kaiwen and Yang, Kejuan and Zhang, Shudan and Deng, Xiang and Zeng, Aohan and Du, Zhengxiao and Zhang, Chenhui and Shen, Sheng and Zhang, Tianjun and Su, Yu and Sun, Huan and Huang, Minlie and Dong, Yuxiao and Tang, Jie},
+  title        = {{AgentBench}: Evaluating {LLMs} as Agents},
+  booktitle    = {Proc. Int. Conf. Learning Representations (ICLR)},
+  year         = {2024},
+  url          = {https://arxiv.org/abs/2308.03688},
+  note         = {[O] Multi-environment LLM agent benchmark}
+}
+
+@misc{mialon2023gaia,
+  author       = {Mialon, Gr{\'e}goire and Fourrier, Cl{\'e}mentine and Swift, Craig and Wolf, Thomas and LeCun, Yann and Scialom, Thomas},
+  title        = {{GAIA}: A Benchmark for General {AI} Assistants},
+  year         = {2023},
+  eprint       = {2311.12983},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2311.12983},
+  note         = {[A] General AI assistant benchmark}
+}
+
+@inproceedings{jimenez2024swebench,
+  author       = {Jimenez, Carlos E. and Yang, John and Wettig, Alexander and Yao, Shunyu and Pei, Kexin and Press, Ofir and Narasimhan, Karthik},
+  title        = {{SWE-bench}: Can Language Models Resolve Real-World {GitHub} Issues?},
+  booktitle    = {Proc. Int. Conf. Learning Representations (ICLR)},
+  year         = {2024},
+  url          = {https://arxiv.org/abs/2310.06770},
+  note         = {[A] Software engineering agent benchmark}
+}
+
+@misc{qin2023toolllm,
+  author       = {Qin, Yujia and Liang, Shihao and Ye, Yining and Zhu, Kunlun and Yan, Lan and Lu, Yaxi and Lin, Yankai and Cong, Xin and Tang, Xiangru and Qian, Bill and others},
+  title        = {{ToolLLM}: Facilitating Large Language Models to Master 16000+ Real-World {APIs}},
+  year         = {2023},
+  eprint       = {2307.16789},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2307.16789},
+  note         = {[A] Tool use benchmark and dataset (ToolBench)}
+}
+
+@inproceedings{patil2025bfcl,
+  author       = {Patil, Shishir G. and others},
+  title        = {The {Berkeley} Function Calling Leaderboard ({BFCL}): From Tool Use to Agentic Evaluation of Large Language Models},
+  booktitle    = {Proc. Int. Conf. Machine Learning (ICML)},
+  year         = {2025},
+  url          = {https://proceedings.mlr.press/v267/patil25a.html},
+  note         = {[O] Function-calling and agentic evaluation}
+}
+
+@inproceedings{mohammadi2025agenteval,
+  author       = {Mohammadi, Mahmoud and others},
+  title        = {Evaluation and Benchmarking of {LLM} Agents: A Survey},
+  booktitle    = {Proc. 31st ACM SIGKDD Conf. on Knowledge Discovery and Data Mining (KDD)},
+  year         = {2025},
+  doi          = {10.1145/3711896.3736570},
+  url          = {https://dl.acm.org/doi/10.1145/3711896.3736570},
+  note         = {[O] Agent evaluation tutorial-track survey}
+}
+
+@misc{agenteval2503survey,
+  title        = {A Survey on Evaluation of {LLM}-Based Agents},
+  year         = {2025},
+  eprint       = {2503.16416},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2503.16416},
+  note         = {[O] Preprint}
+}
+
+@inproceedings{liang2023helm,
+  author       = {Liang, Percy and Bommasani, Rishi and Lee, Tony and others},
+  title        = {Holistic Evaluation of Language Models ({HELM})},
+  booktitle    = {Transactions on Machine Learning Research},
+  year         = {2023},
+  url          = {https://arxiv.org/abs/2211.09110},
+  note         = {[O] Multi-metric LLM evaluation}
+}
+
+@inproceedings{thakur2021beir,
+  author       = {Thakur, Nandan and Reimers, Nils and R{\"u}ckl{\'e}, Andreas and Srivastava, Abhishek and Gurevych, Iryna},
+  title        = {{BEIR}: A Heterogeneous Benchmark for Zero-Shot Evaluation of Information Retrieval Models},
+  booktitle    = {Advances in Neural Information Processing Systems (NeurIPS) Datasets and Benchmarks},
+  year         = {2021},
+  url          = {https://arxiv.org/abs/2104.08663},
+  note         = {[A] Foundational IR benchmark}
+}
+
+@inproceedings{muennighoff2023mteb,
+  author       = {Muennighoff, Niklas and Tazi, Nouamane and Magne, Lo{\"i}c and Reimers, Nils},
+  title        = {{MTEB}: Massive Text Embedding Benchmark},
+  booktitle    = {Proc. 17th Conf. of the European Chapter of the ACL (EACL)},
+  year         = {2023},
+  url          = {https://aclanthology.org/2023.eacl-main.148/},
+  note         = {[O] Foundational embedding benchmark}
+}
+
+% -------------------------------------------------------------
+% G. HALLUCINATION, FAITHFULNESS, FACTUALITY
+% -------------------------------------------------------------
+
+@article{huang2024hallucinationsurvey,
+  author       = {Huang, Lei and Yu, Weijiang and Ma, Weitao and Zhong, Weihong and Feng, Zhangyin and Wang, Haotian and Chen, Qianglong and Peng, Weihua and Feng, Xiaocheng and Qin, Bing and Liu, Ting},
+  title        = {A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions},
+  journal      = {ACM Transactions on Information Systems},
+  year         = {2024},
+  doi          = {10.1145/3703155},
+  note         = {[O] Comprehensive hallucination survey}
+}
+
+@inproceedings{lin2022truthfulqa,
+  author       = {Lin, Stephanie and Hilton, Jacob and Evans, Owain},
+  title        = {{TruthfulQA}: Measuring How Models Mimic Human Falsehoods},
+  booktitle    = {Proc. 60th Annu. Meeting of the ACL},
+  year         = {2022},
+  url          = {https://arxiv.org/abs/2109.07958},
+  note         = {[A] Foundational factuality benchmark}
+}
+
+@inproceedings{li2023halueval,
+  author       = {Li, Junyi and Cheng, Xiaoxue and Zhao, Wayne Xin and Nie, Jian-Yun and Wen, Ji-Rong},
+  title        = {{HaluEval}: A Large-Scale Hallucination Evaluation Benchmark for Large Language Models},
+  booktitle    = {Proc. 2023 Conf. Empirical Methods in Natural Language Processing (EMNLP)},
+  year         = {2023},
+  url          = {https://arxiv.org/abs/2305.11747},
+  note         = {[A] Hallucination evaluation benchmark}
+}
+
+@inproceedings{min2023factscore,
+  author       = {Min, Sewon and Krishna, Kalpesh and Lyu, Xinxi and Lewis, Mike and Yih, Wen-tau and Koh, Pang Wei and Iyyer, Mohit and Zettlemoyer, Luke and Hajishirzi, Hannaneh},
+  title        = {{FActScore}: Fine-Grained Atomic Evaluation of Factual Precision in Long-Form Text Generation},
+  booktitle    = {Proc. 2023 Conf. Empirical Methods in Natural Language Processing (EMNLP)},
+  year         = {2023},
+  url          = {https://arxiv.org/abs/2305.14251},
+  note         = {[A] Atomic factuality metric}
+}
+
+% -------------------------------------------------------------
+% H. SECURITY: PROMPT INJECTION, JAILBREAK, RAG ATTACKS
+% -------------------------------------------------------------
+
+@inproceedings{greshake2023indirectinjection,
+  author       = {Greshake, Kai and Abdelnabi, Sahar and Mishra, Shailesh and Endres, Christoph and Holz, Thorsten and Fritz, Mario},
+  title        = {Not What You've Signed Up For: Compromising Real-World {LLM}-Integrated Applications with Indirect Prompt Injection},
+  booktitle    = {Proc. 16th ACM Workshop on Artificial Intelligence and Security (AISec '23)},
+  year         = {2023},
+  doi          = {10.1145/3605764.3623985},
+  note         = {[O] Foundational indirect prompt injection paper}
+}
+
+@inproceedings{zou2025poisonedrag,
+  author       = {Zou, Wei and Geng, Runpeng and Wang, Binghui and Jia, Jinyuan},
+  title        = {{PoisonedRAG}: Knowledge Corruption Attacks to Retrieval-Augmented Generation of Large Language Models},
+  booktitle    = {Proc. 34th USENIX Security Symposium},
+  year         = {2025},
+  url          = {https://www.usenix.org/system/files/usenixsecurity25-zou-poisonedrag.pdf},
+  note         = {[O] Foundational RAG poisoning paper; peer-reviewed}
+}
+
+@misc{yi2024jailbreaksurvey,
+  author       = {Yi, Sibo and Liu, Yule and Sun, Zhen and Cong, Tianshuo and He, Xinlei and Song, Jiaxing and Xu, Ke and Li, Qi},
+  title        = {Jailbreak Attacks and Defenses Against Large Language Models: A Survey},
+  year         = {2024},
+  eprint       = {2407.04295},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2407.04295},
+  note         = {[O] Comprehensive jailbreak survey}
+}
+
+@article{promptinjectionsurvey2026sd,
+  title        = {Prompt Injection Attacks on Large Language Models: A Survey of Attack Methods, Root Causes, and Defense Strategies},
+  journal      = {ScienceDirect (Elsevier)},
+  year         = {2025},
+  url          = {https://www.sciencedirect.com/org/science/article/pii/S1546221826001384},
+  note         = {[M] Peer-reviewed journal; verify authors}
+}
+
+@article{promptinjectionreview2026mdpi,
+  title        = {Prompt Injection Attacks in Large Language Models and {AI} Agent Systems: A Comprehensive Review of Vulnerabilities, Attack Vectors, and Defense Mechanisms},
+  journal      = {Information (MDPI)},
+  volume       = {17},
+  number       = {1},
+  pages        = {54},
+  year         = {2026},
+  url          = {https://www.mdpi.com/2078-2489/17/1/54},
+  note         = {[O] Open-access peer-reviewed review}
+}
+
+@inproceedings{threatsdefenses2025acm,
+  title        = {Threats and Defenses for Large Language Models: A Survey},
+  booktitle    = {Proc. 2025 8th Int. Conf. on Computer Information Science and Artificial Intelligence (CISAI)},
+  year         = {2025},
+  doi          = {10.1145/3773365.3773631},
+  note         = {[M] Peer-reviewed; verify authors}
+}
+
+% -------------------------------------------------------------
+% I. AGENT SECURITY BENCHMARKS AND MEMORY ATTACKS
+% -------------------------------------------------------------
+
+@inproceedings{zhang2025agentsecuritybench,
+  author       = {Zhang, Hanrong and others},
+  title        = {Agent Security Bench ({ASB}): Formalizing and Benchmarking Attacks and Defenses in {LLM}-Based Agents},
+  booktitle    = {Proc. Int. Conf. Learning Representations (ICLR)},
+  year         = {2025},
+  url          = {https://arxiv.org/abs/2410.02644},
+  note         = {[O] Peer-reviewed; agent security benchmark}
+}
+
+@inproceedings{debenedetti2024agentdojo,
+  author       = {Debenedetti, Edoardo and Zhang, Jie and Balunovi{\'c}, Mislav and Beurer-Kellner, Luca and Fischer, Marc and Tram{\`e}r, Florian},
+  title        = {{AgentDojo}: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for {LLM} Agents},
+  booktitle    = {Advances in Neural Information Processing Systems (NeurIPS) Datasets and Benchmarks},
+  year         = {2024},
+  url          = {https://arxiv.org/abs/2406.13352},
+  note         = {[A] Tool-using agent prompt-injection benchmark}
+}
+
+@misc{zhan2024injecagent,
+  author       = {Zhan, Qiusi and Liang, Zhixiang and Ying, Zifan and Kang, Daniel},
+  title        = {{InjecAgent}: Benchmarking Indirect Prompt Injections in Tool-Integrated Large Language Model Agents},
+  year         = {2024},
+  eprint       = {2403.02691},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2403.02691},
+  note         = {[A] Indirect injection benchmark for tool-using agents}
+}
+
+@inproceedings{chen2024agentpoison,
+  author       = {Chen, Zhaorun and Xiang, Zhen and Xiao, Chaowei and Song, Dawn and Li, Bo},
+  title        = {{AgentPoison}: Red-Teaming {LLM} Agents via Poisoning Memory or Knowledge Bases},
+  booktitle    = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year         = {2024},
+  url          = {https://openreview.net/forum?id=Y841BRW9rY},
+  note         = {[O] Memory and KB poisoning of agents}
+}
+
+@misc{memorypoisoning2026arxiv,
+  title        = {Memory Poisoning Attack and Defense on Memory-Based {LLM} Agents},
+  year         = {2026},
+  eprint       = {2601.05504},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2601.05504},
+  note         = {[O] Recent preprint on memory attacks}
+}
+
+@misc{memorygraft2025,
+  title        = {{MemoryGraft}: Persistent Compromise of {LLM} Agents via Poisoned Experience Retrieval},
+  year         = {2025},
+  eprint       = {2512.16962},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2512.16962},
+  note         = {[O] Recent memory poisoning attack}
+}
+
+@misc{agenticsecurity2510survey,
+  title        = {A Survey on Agentic Security: Applications, Threats and Defenses},
+  year         = {2025},
+  eprint       = {2510.06445},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2510.06445},
+  note         = {[O] Recent agent security survey}
+}
+
+% -------------------------------------------------------------
+% J. EMBEDDING / VECTOR DATABASE PRIVACY AND SECURITY
+% -------------------------------------------------------------
+
+@misc{embeddinginversion2024arxiv,
+  title        = {Mitigating Privacy Risks in {LLM} Embeddings from Embedding Inversion},
+  year         = {2024},
+  eprint       = {2411.05034},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2411.05034},
+  note         = {[O] Embedding privacy mitigations}
+}
+
+@misc{embeddinginversion2024multilingual,
+  title        = {Text Embedding Inversion Security for Multilingual Language Models},
+  year         = {2024},
+  eprint       = {2401.12192},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2401.12192},
+  note         = {[O] Multilingual embedding security}
+}
+
+@misc{transferableinversion2024,
+  title        = {Transferable Embedding Inversion Attack: Uncovering Privacy Risks in Text Embeddings without Model Queries},
+  year         = {2024},
+  eprint       = {2406.10280},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2406.10280},
+  note         = {[O] Black-box embedding inversion}
+}
+
+% -------------------------------------------------------------
+% K. GUARDRAILS AND SAFETY ALIGNMENT
+% -------------------------------------------------------------
+
+@inproceedings{rebedea2023nemoguardrails,
+  author       = {Rebedea, Traian and Dinu, Razvan and Sreedhar, Makesh Narsimhan and Parisien, Christopher and Cohen, Jonathan},
+  title        = {{NeMo Guardrails}: A Toolkit for Controllable and Safe {LLM} Applications with Programmable Rails},
+  booktitle    = {Proc. 2023 Conf. Empirical Methods in Natural Language Processing: System Demonstrations (EMNLP Demos)},
+  year         = {2023},
+  url          = {https://aclanthology.org/2023.emnlp-demo.40/},
+  note         = {[O] Programmable LLM guardrails}
+}
+
+@misc{inan2023llamaguard,
+  author       = {Inan, Hakan and Upasani, Kartikeya and Chi, Jianfeng and Rungta, Rashi and Iyer, Krithika and Mao, Yuning and Tontchev, Michael and Hu, Qing and Fuller, Brian and Testuggine, Davide and Khabsa, Madian},
+  title        = {{Llama Guard}: {LLM}-Based Input-Output Safeguard for Human-{AI} Conversations},
+  year         = {2023},
+  eprint       = {2312.06674},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2312.06674},
+  note         = {[A] Input-output safeguard model from Meta}
+}
+
+@misc{bai2022constitutionalai,
+  author       = {Bai, Yuntao and Kadavath, Saurav and Kundu, Sandipan and others},
+  title        = {Constitutional {AI}: Harmlessness from {AI} Feedback},
+  year         = {2022},
+  eprint       = {2212.08073},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2212.08073},
+  note         = {[O] Constitutional AI / RLAIF; Anthropic}
+}
+
+% -------------------------------------------------------------
+% L. STANDARDS, GOVERNANCE, AND POLICY
+% -------------------------------------------------------------
+
+@techreport{nist2024genaiprofile,
+  author       = {{National Institute of Standards and Technology}},
+  title        = {Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile},
+  institution  = {NIST},
+  number       = {AI 600-1},
+  year         = {2024},
+  url          = {https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf},
+  note         = {[O] Normative; July 2024}
+}
+
+@techreport{nist2024ssdfgenai,
+  author       = {{National Institute of Standards and Technology}},
+  title        = {Secure Software Development Practices for Generative {AI} and Dual-Use Foundation Models: An {SSDF} Community Profile},
+  institution  = {NIST},
+  number       = {SP 800-218A},
+  year         = {2024},
+  url          = {https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218A.pdf},
+  note         = {[O] Normative; July 2024}
+}
+
+@misc{owasp2025llmtop10,
+  author       = {{OWASP Foundation}},
+  title        = {{OWASP} Top 10 for Large Language Model Applications, v2025},
+  year         = {2025},
+  url          = {https://genai.owasp.org/resource/owasp-top-10-for-llm-applications-2025/},
+  note         = {[O] Normative; LLM threat catalogue}
+}
+
+@misc{owasp2025agentictop10,
+  author       = {{OWASP Foundation}},
+  title        = {{OWASP} Top 10 for Agentic Applications},
+  year         = {2025},
+  url          = {https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-aut autonomous-ai/},
+  note         = {[O] Normative; agentic AI threat catalogue, Dec 2025}
+}
+
+@misc{csa2025agenticprofile,
+  author       = {{Cloud Security Alliance}},
+  title        = {{NIST AI RMF} Agentic Profile, v1},
+  year         = {2025},
+  url          = {https://labs.cloudsecurityalliance.org/agentic/agentic-nist-ai-rmf-profile-v1/},
+  note         = {[O] Working draft; agentic governance}
+}
+
+@misc{iso420012023,
+  author       = {{International Organization for Standardization}},
+  title        = {{ISO/IEC} 42001:2023 Information Technology --- Artificial Intelligence --- Management System},
+  year         = {2023},
+  url          = {https://www.iso.org/standard/42001},
+  note         = {[A] Normative; abstract level only without purchase}
+}
+
+@misc{euaiact2024,
+  author       = {{European Parliament and Council}},
+  title        = {Regulation ({EU}) 2024/1689 of the European Parliament and of the Council Laying Down Harmonised Rules on Artificial Intelligence ({EU} {AI} Act)},
+  year         = {2024},
+  url          = {https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai},
+  note         = {[O] Regulatory; high-risk + GPAI obligations}
+}
+
+% -------------------------------------------------------------
+% M. AGENT TRUST, RISK, AND SECURITY MANAGEMENT
+% -------------------------------------------------------------
+
+@misc{trism2025agentic,
+  title        = {{TRiSM} for Agentic {AI}: A Review of Trust, Risk, and Security Management in {LLM}-Based Agentic Multi-Agent Systems},
+  year         = {2025},
+  eprint       = {2506.04133},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2506.04133},
+  note         = {[O] Direct adjacency to TERA; preprint with Elsevier ScienceDirect appearance}
+}
+
+% -------------------------------------------------------------
+% N. PROTOCOLS AND INFRASTRUCTURE
+% -------------------------------------------------------------
+
+@misc{anthropic2024mcp,
+  author       = {{Anthropic}},
+  title        = {Model Context Protocol},
+  year         = {2024},
+  url          = {https://www.anthropic.com/news/model-context-protocol},
+  note         = {[O] Industry protocol; foundational to MCP-based agent tooling}
+}
+
+@misc{otel2024genai,
+  author       = {{OpenTelemetry Project}},
+  title        = {Semantic Conventions for Generative {AI} Systems},
+  year         = {2024},
+  url          = {https://opentelemetry.io/docs/specs/semconv/gen-ai/},
+  note         = {[O] Industry standard for LLM observability}
+}
+
+% -------------------------------------------------------------
+% O. LLMOPS / GENAIOPS / MLOPS
+% -------------------------------------------------------------
+
+@article{mdpi2025mlopstoLlmops,
+  title        = {Transitioning from {MLOps} to {LLMOps}: Navigating the Unique Challenges of Large Language Models},
+  journal      = {Information (MDPI)},
+  volume       = {16},
+  number       = {2},
+  pages        = {87},
+  year         = {2025},
+  url          = {https://www.mdpi.com/2078-2489/16/2/87},
+  note         = {[O] Peer-reviewed; LLMOps transition analysis}
+}
+
+@misc{llmopsreview2025,
+  title        = {{LLMOps}, {AgentOps}, and {MLOps} for Generative {AI}: A Comprehensive Review},
+  year         = {2025},
+  url          = {https://www.researchgate.net/publication/393122731_LLMOps_AgentOps_and_MLOps_for_Generative_AI_A_Comprehensive_Review},
+  note         = {[M] Verify venue and authors}
+}
+
+% -------------------------------------------------------------
+% P. ENTERPRISE / DOMAIN APPLICATIONS
+% -------------------------------------------------------------
+
+@article{ragenterprise2026mdpi,
+  title        = {Retrieval-Augmented Generation ({RAG}) and Large Language Models ({LLMs}) for Enterprise Knowledge Management and Document Automation: A Systematic Literature Review},
+  journal      = {Applied Sciences (MDPI)},
+  year         = {2026},
+  url          = {https://www.mdpi.com/2076-3417/16/1/368},
+  note         = {[O] Peer-reviewed; enterprise RAG SLR}
+}
+
+% =============================================================
+% ROUND 2 ADDITIONS — Peer-reviewed depth from top venues
+% (USENIX Security, IEEE S&P, ACM CCS, NDSS, ICLR, NeurIPS,
+% ACL, EMNLP, NAACL, SIGIR, ACM TOIS, ACM CSUR, Springer)
+% =============================================================
+
+% -------------------------------------------------------------
+% Q. SECURITY — TOP-TIER PEER-REVIEWED VENUES
+% -------------------------------------------------------------
+
+@inproceedings{liu2024promptinjectionbench,
+  author       = {Liu, Yupei and others},
+  title        = {Formalizing and Benchmarking Prompt Injection Attacks and Defenses},
+  booktitle    = {Proc. 33rd USENIX Security Symposium},
+  year         = {2024},
+  url          = {https://github.com/liu00222/Open-Prompt-Injection},
+  note         = {[A] Open Prompt Injection benchmark; verify authors}
+}
+
+@inproceedings{shafran2025jamming,
+  author       = {Shafran, Avital and others},
+  title        = {Machine Against the {RAG}: Jamming Retrieval-Augmented Generation with Blocker Documents},
+  booktitle    = {Proc. 34th USENIX Security Symposium},
+  year         = {2025},
+  url          = {https://www.usenix.org/system/files/conference/usenixsecurity25/sec25cycle1-prepub-980-shafran.pdf},
+  note         = {[O] Top-tier; jamming attack on RAG}
+}
+
+@inproceedings{ayzenshteyn2025cloakhoneytrap,
+  author       = {Ayzenshteyn, Daniel and others},
+  title        = {Cloak, Honey, Trap: Proactive Defenses Against {LLM} Agents},
+  booktitle    = {Proc. 34th USENIX Security Symposium},
+  year         = {2025},
+  url          = {https://www.usenix.org/system/files/usenixsecurity25-ayzenshteyn.pdf},
+  note         = {[O] Top-tier; proactive agent defenses}
+}
+
+@inproceedings{chen2025struq,
+  author       = {Chen, Sizhe and others},
+  title        = {{StruQ}: Defending Against Prompt Injection with Structured Queries},
+  booktitle    = {Proc. 34th USENIX Security Symposium},
+  year         = {2025},
+  url          = {https://www.usenix.org/system/files/conference/usenixsecurity25/sec24winter-prepub-468-chen-sizhe.pdf},
+  note         = {[O] Top-tier; structured-query defense}
+}
+
+@inproceedings{jbshield2025,
+  author       = {{NISP Lab}},
+  title        = {{JBShield}: Defending Large Language Models from Jailbreak Attacks through Activated Concept Analysis and Manipulation},
+  booktitle    = {Proc. 34th USENIX Security Symposium},
+  year         = {2025},
+  url          = {https://github.com/NISPLab/JBShield},
+  note         = {[A] Top-tier; verify full author list}
+}
+
+@inproceedings{datasentinel2025sp,
+  author       = {Liu, Yupei and Jia, Yuqi and Jia, Jinyuan and Gong, Neil Zhenqiang},
+  title        = {{DataSentinel}: A Game-Theoretic Detection of Prompt Injection Attacks},
+  booktitle    = {Proc. IEEE Symposium on Security and Privacy (S\&P)},
+  year         = {2025},
+  note         = {[A] Top-tier; verify exact bibliographic record}
+}
+
+@inproceedings{promptlocate2026sp,
+  author       = {Anonymous},
+  title        = {{PromptLocate}: Localizing Prompt Injection Attacks},
+  booktitle    = {Proc. IEEE Symposium on Security and Privacy (S\&P)},
+  year         = {2026},
+  note         = {[M] Accepted; verify authors}
+}
+
+@inproceedings{shi2024optprompt,
+  author       = {Shi, Jiawen and others},
+  title        = {Optimization-Based Prompt Injection Attack to {LLM}-as-a-Judge},
+  booktitle    = {Proc. 2024 ACM SIGSAC Conf. Computer and Communications Security (CCS)},
+  year         = {2024},
+  doi          = {10.1145/3658644},
+  note         = {[A] Top-tier; LLM-as-judge injection}
+}
+
+@inproceedings{pleak2024ccs,
+  author       = {Hui, Bo and others},
+  title        = {{PLeak}: Prompt Leaking Attacks against Large Language Model Applications},
+  booktitle    = {Proc. 2024 ACM SIGSAC Conf. Computer and Communications Security (CCS)},
+  year         = {2024},
+  doi          = {10.1145/3658644},
+  note         = {[A] Top-tier; prompt leakage}
+}
+
+@inproceedings{deng2024masterkey,
+  author       = {Deng, Gelei and Liu, Yi and Li, Yuekang and Wang, Kailong and Zhang, Ying and Li, Zefeng and Wang, Haoyu and Zhang, Tianwei and Liu, Yang},
+  title        = {{MASTERKEY}: Automated Jailbreaking of Large Language Model Chatbots},
+  booktitle    = {Proc. Network and Distributed System Security Symposium (NDSS)},
+  year         = {2024},
+  url          = {https://www.ndss-symposium.org/wp-content/uploads/2024-188-paper.pdf},
+  note         = {[O] Top-tier; automated jailbreak}
+}
+
+@inproceedings{liu2025propertygpt,
+  author       = {Liu, Ye and others},
+  title        = {{PropertyGPT}: {LLM}-Driven Formal Verification of Smart Contracts through Retrieval-Augmented Property Generation},
+  booktitle    = {Proc. Network and Distributed System Security Symposium (NDSS)},
+  year         = {2025},
+  note         = {[A] Top-tier; RAG for formal verification}
+}
+
+@misc{phantombackdoor2024,
+  author       = {Chaudhari, Harsh and Severi, Giorgio and Abascal, John and Jagielski, Matthew and Choquette-Choo, Christopher A. and Nasr, Milad and Nita-Rotaru, Cristina and Oprea, Alina},
+  title        = {{Phantom}: General Backdoor Attacks on Retrieval Augmented Language Generation},
+  year         = {2024},
+  eprint       = {2405.20485},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2405.20485},
+  note         = {[O] Backdoor attack on RAG}
+}
+
+@misc{backdooredretrievers2024,
+  title        = {Backdoored Retrievers for Prompt Injection Attacks on Retrieval Augmented Generation of Large Language Models},
+  year         = {2024},
+  eprint       = {2410.14479},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2410.14479},
+  note         = {[O] Retriever-targeted backdoor; verify authors}
+}
+
+@article{aiagentsthreat2025acm,
+  title        = {{AI} Agents Under Threat: A Survey of Key Security Challenges and Future Pathways},
+  journal      = {ACM Computing Surveys},
+  year         = {2025},
+  doi          = {10.1145/3716628},
+  url          = {https://dl.acm.org/doi/pdf/10.1145/3716628},
+  note         = {[O] Top-tier journal; agent security survey}
+}
+
+@article{llmagentsecurity2025sciencedirect,
+  title        = {Security of {LLM}-Based Agents Regarding Attacks, Defenses, and Applications: A Comprehensive Survey},
+  journal      = {Information Fusion (Elsevier)},
+  year         = {2025},
+  url          = {https://www.sciencedirect.com/science/article/abs/pii/S1566253525010036},
+  note         = {[M] Peer-reviewed; verify authors}
+}
+
+% -------------------------------------------------------------
+% R. AGENT FRAMEWORKS — PEER-REVIEWED
+% -------------------------------------------------------------
+
+@inproceedings{hong2024metagpt,
+  author       = {Hong, Sirui and Zhuge, Mingchen and Chen, Jonathan and Zheng, Xiawu and Cheng, Yuheng and Zhang, Ceyao and Wang, Jinlin and Wang, Zili and Yau, Steven Ka Shing and Lin, Zijuan and Zhou, Liyang and Ran, Chenyu and Xiao, Lingfeng and Wu, Chenglin and Schmidhuber, J{\"u}rgen},
+  title        = {{MetaGPT}: Meta Programming for a Multi-Agent Collaborative Framework},
+  booktitle    = {Proc. Int. Conf. Learning Representations (ICLR), Oral},
+  year         = {2024},
+  url          = {https://arxiv.org/abs/2308.00352},
+  note         = {[O] ICLR Oral; multi-agent SE framework}
+}
+
+@inproceedings{qian2024chatdev,
+  author       = {Qian, Chen and Cong, Xin and Yang, Cheng and Chen, Weize and Su, Yusheng and Xu, Juyuan and Liu, Zhiyuan and Sun, Maosong},
+  title        = {{ChatDev}: Communicative Agents for Software Development},
+  booktitle    = {Proc. 62nd Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year         = {2024},
+  url          = {https://aclanthology.org/2024.acl-long.810/},
+  note         = {[O] Multi-agent communicative SE}
+}
+
+% -------------------------------------------------------------
+% S. LONG-HORIZON / COMPUTER-USE AGENT BENCHMARKS
+% -------------------------------------------------------------
+
+@inproceedings{xie2024osworld,
+  author       = {Xie, Tianbao and Zhang, Danyang and Chen, Jixuan and Li, Xiaochuan and Zhao, Siheng and Cao, Ruisheng and Hua, Toh Jing and Cheng, Zhoujun and Shin, Dongchan and Lei, Fangyu and Liu, Yitao and Xu, Yiheng and Zhou, Shuyan and Savarese, Silvio and Xiong, Caiming and Zhong, Victor and Yu, Tao},
+  title        = {{OSWorld}: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments},
+  booktitle    = {Advances in Neural Information Processing Systems (NeurIPS) Datasets and Benchmarks},
+  year         = {2024},
+  url          = {https://arxiv.org/abs/2404.07972},
+  note         = {[O] Top-tier; computer-use benchmark}
+}
+
+@inproceedings{zhou2024webarena,
+  author       = {Zhou, Shuyan and Xu, Frank F. and Zhu, Hao and Zhou, Xuhui and Lo, Robert and Sridhar, Abishek and Cheng, Xianyi and Bisk, Yonatan and Fried, Daniel and Alon, Uri and Neubig, Graham},
+  title        = {{WebArena}: A Realistic Web Environment for Building Autonomous Agents},
+  booktitle    = {Proc. Int. Conf. Learning Representations (ICLR)},
+  year         = {2024},
+  url          = {https://arxiv.org/abs/2307.13854},
+  note         = {[A] Top-tier; web-agent benchmark}
+}
+
+% -------------------------------------------------------------
+% T. EVALUATION — RAG FAITHFULNESS, LONG-FORM, GROUNDEDNESS
+% -------------------------------------------------------------
+
+@inproceedings{wu2024synccheck,
+  author       = {Wu, Di and others},
+  title        = {Synchronous Faithfulness Monitoring for Trustworthy Retrieval-Augmented Language Models},
+  booktitle    = {Proc. 2024 Conf. Empirical Methods in Natural Language Processing (EMNLP)},
+  year         = {2024},
+  url          = {https://aclanthology.org/2024.emnlp-main.527/},
+  note         = {[O] Real-time RAG faithfulness}
+}
+
+@misc{groundedness2024longform,
+  title        = {Groundedness in Retrieval-Augmented Long-Form Generation: An Empirical Study},
+  year         = {2024},
+  eprint       = {2404.07060},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2404.07060},
+  note         = {[O] Empirical groundedness study}
+}
+
+% -------------------------------------------------------------
+% U. RETRIEVERS — DENSE, LATE-INTERACTION, MULTI-VECTOR
+% -------------------------------------------------------------
+
+@inproceedings{khattab2020colbert,
+  author       = {Khattab, Omar and Zaharia, Matei},
+  title        = {{ColBERT}: Efficient and Effective Passage Search via Contextualized Late Interaction over {BERT}},
+  booktitle    = {Proc. 43rd Int. ACM SIGIR Conf. Research and Development in Information Retrieval},
+  year         = {2020},
+  url          = {https://arxiv.org/abs/2004.12832},
+  note         = {[A] Foundational late-interaction retriever}
+}
+
+@misc{wang2024e5,
+  author       = {Wang, Liang and Yang, Nan and Huang, Xiaolong and Yang, Linjun and Majumder, Rangan and Wei, Furu},
+  title        = {Text Embeddings by Weakly-Supervised Contrastive Pre-training ({E5})},
+  year         = {2022},
+  eprint       = {2212.03533},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2212.03533},
+  note         = {[A] E5 retriever}
+}
+
+@misc{chen2024bgem3,
+  author       = {Chen, Jianlv and Xiao, Shitao and Zhang, Peitian and Luo, Kun and Lian, Defu and Liu, Zheng},
+  title        = {{BGE M3}-Embedding: Multi-Lingual, Multi-Functionality, Multi-Granularity Text Embeddings through Self-Knowledge Distillation},
+  year         = {2024},
+  eprint       = {2402.03216},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2402.03216},
+  note         = {[A] Multi-functional retriever}
+}
+
+% -------------------------------------------------------------
+% V. GENERAL LLM SURVEYS (BACKGROUND ANCHORS)
+% -------------------------------------------------------------
+
+@misc{naveed2023llmsurvey,
+  author       = {Naveed, Humza and Khan, Asad Ullah and Qiu, Shi and Saqib, Muhammad and Anwar, Saeed and Usman, Muhammad and Akhtar, Naveed and Barnes, Nick and Mian, Ajmal},
+  title        = {A Comprehensive Overview of Large Language Models},
+  year         = {2023},
+  eprint       = {2307.06435},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2307.06435},
+  note         = {[A] General LLM survey anchor}
+}
+
+@misc{zhao2023llmsurvey,
+  author       = {Zhao, Wayne Xin and Zhou, Kun and Li, Junyi and Tang, Tianyi and Wang, Xiaolei and Hou, Yupeng and Min, Yingqian and Zhang, Beichen and Zhang, Junjie and Dong, Zican and Du, Yifan and Yang, Chen and Chen, Yushuo and Chen, Zhipeng and Jiang, Jinhao and Ren, Ruiyang and Li, Yifan and Tang, Xinyu and Liu, Zikang and Liu, Peiyu and Nie, Jian-Yun and Wen, Ji-Rong},
+  title        = {A Survey of Large Language Models},
+  year         = {2023},
+  eprint       = {2303.18223},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2303.18223},
+  note         = {[A] Heavily cited general LLM survey}
+}
+
+@misc{minaee2024llmsurvey,
+  author       = {Minaee, Shervin and Mikolov, Tom{\'a}{\v{s}} and Nikzad, Narjes and Asgari Chenaghlu, Meysam and Socher, Richard and Amatriain, Xavier and Gao, Jianfeng},
+  title        = {Large Language Models: A Survey},
+  year         = {2024},
+  eprint       = {2402.06196},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2402.06196},
+  note         = {[A] LLM family survey}
+}
+
+% -------------------------------------------------------------
+% W. AGENTIC AI DEFINITION AND TAXONOMY
+% -------------------------------------------------------------
+
+@article{sapkota2025aivsagentic,
+  author       = {Sapkota, Ranjan and Roumeliotis, Konstantinos I. and Karkee, Manoj},
+  title        = {{AI} Agents vs. Agentic {AI}: A Conceptual Taxonomy, Applications and Challenges},
+  journal      = {Information Fusion},
+  volume       = {126},
+  pages        = {103599},
+  year         = {2026},
+  doi          = {10.1016/j.inffus.2025.103599},
+  publisher    = {Elsevier},
+  note         = {[O] Cornell + Univ. of Peloponnese; open-access CC-BY 4.0; first peer-reviewed taxonomy formally separating AI Agents from Agentic AI}
+}
+
+@article{li2026searchexpert,
+  author       = {Li, Jinzheng and Shen, Yiqing and Zhou, Wei and Chen, Hui},
+  title        = {{SearchExpert}: A {GenAI}-Driven Framework for Reasoning-Intensive Multimedia Information Fusion through Fine-Tuning and Reinforcement Learning},
+  journal      = {Information Fusion},
+  volume       = {126},
+  pages        = {103665},
+  year         = {2026},
+  doi          = {10.1016/j.inffus.2025.103665},
+  publisher    = {Elsevier},
+  note         = {[O] Fudan + JHU + Cardiff + Macquarie; introduces SearchExpertBench-25 (200 finance and news queries); 71.5% accuracy with 40% token reduction}
+}
+
+@article{springer2025agenticarchitectures,
+  title        = {Agentic {AI} Systems in the Age of Generative Models: Architectures, Cloud Scalability, and Real-World Applications},
+  journal      = {Artificial Intelligence Review (Springer)},
+  year         = {2025},
+  doi          = {10.1007/s10462-025-11458-6},
+  note         = {[O] Peer-reviewed; agentic + cloud}
+}
+
+% -------------------------------------------------------------
+% X. SAFETY, SAFETY BENCHMARKS, RED-TEAMING
+% -------------------------------------------------------------
+
+@misc{ailuminate2025,
+  author       = {{MLCommons AI Risk and Reliability Working Group}},
+  title        = {{AILuminate}: Introducing v1.0 of the {AI} Risk and Reliability Benchmark from {MLCommons}},
+  year         = {2025},
+  eprint       = {2503.05731},
+  archivePrefix= {arXiv},
+  url          = {https://arxiv.org/abs/2503.05731},
+  note         = {[O] Industry-standard safety benchmark}
+}
+
+@inproceedings{mazeika2024harmbench,
+  author       = {Mazeika, Mantas and Phan, Long and Yin, Xuwang and Zou, Andy and Wang, Zifan and Mu, Norman and Sakhaee, Elham and Li, Nathaniel and Basart, Steven and Li, Bo and Forsyth, David and Hendrycks, Dan},
+  title        = {{HarmBench}: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal},
+  booktitle    = {Proc. Int. Conf. Machine Learning (ICML)},
+  year         = {2024},
+  url          = {https://arxiv.org/abs/2402.04249},
+  note         = {[A] Standardized red-teaming benchmark}
+}
+
+% -------------------------------------------------------------
+% Y. HUMAN-IN-THE-LOOP AND OVERSIGHT
+% -------------------------------------------------------------
+
+@article{hitl2025entropy,
+  title        = {Human-in-the-Loop Artificial Intelligence: A Systematic Review of Concepts, Methods, and Applications},
+  journal      = {Entropy (MDPI)},
+  volume       = {28},
+  number       = {4},
+  pages        = {377},
+  year         = {2026},
+  url          = {https://www.mdpi.com/1099-4300/28/4/377},
+  note         = {[O] Open-access systematic review}
+}
+
+% -------------------------------------------------------------
+% Z. CSA AI CONTROLS MATRIX AND RELATED GOVERNANCE
+% -------------------------------------------------------------
+
+@misc{csa2025aicm,
+  author       = {{Cloud Security Alliance}},
+  title        = {{AI} Controls Matrix ({AICM})},
+  year         = {2025},
+  url          = {https://cloudsecurityalliance.org/artifacts/ai-controls-matrix},
+  note         = {[O] 243 control objectives mapped to ISO 42001, ISO 27001, NIST AI RMF, BSI AIC4}
+}
+
+% =============================================================
+% ROUND 3 ADDITIONS — EB1A-grade depth from IEEE Xplore + ACM DL
+% Top-tier security (USENIX, NDSS, IEEE S&P, ACM CCS, AISec, WWW, ICSE),
+% top-tier IR/NLP (SIGIR, EMNLP, ACL), top-tier ML (NeurIPS Datasets),
+% IEEE journals and conference papers
+% =============================================================
+
+% -------------------------------------------------------------
+% AA. USENIX SECURITY 2024-2025
+% -------------------------------------------------------------
+
+@inproceedings{yan2024codebreaker,
+  author       = {Yan, Shenao and Wang, Shen and Duan, Yue and Hong, Hanbin and Lee, Kiho and Kim, Doowon and Hong, Yuan},
+  title        = {An {LLM}-Assisted Easy-to-Trigger Backdoor Attack on Code Completion Models: Injecting Disguised Vulnerabilities against Strong Detection},
+  booktitle    = {Proc. 33rd USENIX Security Symposium},
+  year         = {2024},
+  url          = {https://www.usenix.org/conference/usenixsecurity24/presentation/yan},
+  note         = {[O] Top-tier; LLM-assisted backdoor on code completion}
+}
+
+@inproceedings{zhang2024instructionbackdoor,
+  author       = {Zhang, Rui and Li, Hongwei and Wen, Rui and Jiang, Wenbo and Zhang, Yuan and Backes, Michael and Shen, Yun and Zhang, Yang},
+  title        = {Instruction Backdoor Attacks Against Customized {LLM}s},
+  booktitle    = {Proc. 33rd USENIX Security Symposium},
+  year         = {2024},
+  url          = {https://www.usenix.org/conference/usenixsecurity24/presentation/zhang-rui},
+  note         = {[O] Top-tier; first instruction backdoor on customized LLMs}
+}
+
+@inproceedings{weiss2024remotekeylogging,
+  author       = {Weiss, Roy and Ayzenshteyn, Daniel and Mirsky, Yisroel},
+  title        = {What Was Your Prompt? A Remote Keylogging Attack on {AI} Assistants},
+  booktitle    = {Proc. 33rd USENIX Security Symposium},
+  year         = {2024},
+  url          = {https://www.usenix.org/conference/usenixsecurity24/presentation/weiss},
+  note         = {[O] Top-tier; reconstructs 27% of AI responses, infers topic from 53%}
+}
+
+@inproceedings{russinovich2025crescendo,
+  author       = {Russinovich, Mark and Salem, Ahmed and Eldan, Ronen},
+  title        = {Great, Now Write an Article About That: The Crescendo Multi-Turn {LLM} Jailbreak Attack},
+  booktitle    = {Proc. 34th USENIX Security Symposium},
+  year         = {2025},
+  url          = {https://www.usenix.org/conference/usenixsecurity25/presentation/russinovich},
+  note         = {[O] Top-tier; multi-turn escalation jailbreak from Microsoft}
+}
+
+@inproceedings{krauss2025twinbreak,
+  author       = {Krau{\ss}, Torsten and Dashtbani, Hamid and Dmitrienko, Alexandra},
+  title        = {{TwinBreak}: Jailbreaking {LLM} Security Alignments based on Twin Prompts},
+  booktitle    = {Proc. 34th USENIX Security Symposium},
+  year         = {2025},
+  url          = {https://www.usenix.org/conference/usenixsecurity25/presentation/krauss},
+  note         = {[O] Top-tier; University of W{\"u}rzburg; twin-prompt jailbreak technique}
+}
+
+% -------------------------------------------------------------
+% AB. NDSS 2024-2026
+% -------------------------------------------------------------
+
+@inproceedings{shi2026toolhijacker,
+  author       = {Shi, Jiawen and Yuan, Zenghui and Tie, Guiyao and Zhou, Pan and Gong, Neil Zhenqiang and Sun, Lichao},
+  title        = {Prompt Injection Attack to Tool Selection in {LLM} Agents},
+  booktitle    = {Proc. Network and Distributed System Security Symposium (NDSS)},
+  year         = {2026},
+  doi          = {10.14722/ndss.2026.230675},
+  url          = {https://www.ndss-symposium.org/ndss-paper/prompt-injection-attack-to-tool-selection-in-llm-agents/},
+  note         = {[O] Top-tier; ToolHijacker is the first no-box prompt-injection attack to tool selection; bypasses StruQ, SecAlign, DataSentinel}
+}
+
+@inproceedings{wang2026obliinjection,
+  author       = {Wang, Reachal and Jia, Yuqi and Gong, Neil Zhenqiang},
+  title        = {{ObliInjection}: Order-Oblivious Prompt Injection Attack to {LLM} Agents with Multi-Source Data},
+  booktitle    = {Proc. Network and Distributed System Security Symposium (NDSS)},
+  year         = {2026},
+  doi          = {10.14722/ndss.2026.240702},
+  url          = {https://www.ndss-symposium.org/ndss-paper/obliinjection-order-oblivious-prompt-injection-attack-to-llm-agents-with-multi-source-data/},
+  note         = {[O] Top-tier; first multi-source prompt-injection effective with 1 contaminated segment of 6-100}
+}
+
+@inproceedings{dong2025philosophersstone,
+  author       = {Dong, Tian and Xue, Minhui and Chen, Guoxing and Holland, Rayne and Meng, Yan and Li, Shaofeng and Liu, Zhen and Zhu, Haojin},
+  title        = {The Philosopher's Stone: Trojaning Plugins of Large Language Models},
+  booktitle    = {Proc. Network and Distributed System Security Symposium (NDSS)},
+  year         = {2025},
+  doi          = {10.14722/ndss.2025.230164},
+  url          = {https://www.ndss-symposium.org/wp-content/uploads/2025-s164-paper.pdf},
+  note         = {[O] Shanghai Jiao Tong + CSIRO Data61 + Southeast Univ; POLISHED + FUSION attacks; 86\% malware download success}
+}
+
+@inproceedings{wei2024lmsanitator,
+  author       = {Wei, Chengkun and Meng, Wenlong and Zhang, Zhikun and Chen, Min and Zhao, Minghu and Fang, Wenjing and Wang, Lei and Zhang, Zihui and Chen, Wenzhi},
+  title        = {{LMSanitator}: Defending Prompt-Tuning Against Task-Agnostic Backdoors},
+  booktitle    = {Proc. Network and Distributed System Security Symposium (NDSS)},
+  year         = {2024},
+  doi          = {10.14722/ndss.2024.23238},
+  url          = {https://www.ndss-symposium.org/wp-content/uploads/2024-238-paper.pdf},
+  note         = {[O] Zhejiang + Stanford + CISPA + Ant Group; 92.8\% backdoor detection on 960 models}
+}
+
+@inproceedings{wu2025promptpeek,
+  author       = {Wu, Guanlong and Zhang, Zheng and Zhang, Yao and Wang, Weili and Niu, Jianyu and Wu, Ye and Zhang, Yinqian},
+  title        = {{I} Know What You Asked: Prompt Leakage via {KV-Cache} Sharing in Multi-Tenant {LLM} Serving},
+  booktitle    = {Proc. Network and Distributed System Security Symposium (NDSS)},
+  year         = {2025},
+  doi          = {10.14722/ndss.2025.241772},
+  url          = {https://www.ndss-symposium.org/wp-content/uploads/2025-1772-paper.pdf},
+  note         = {[O] Top-tier; PROMPTPEEK side-channel reconstructs prompts at 99% success on Llama2-13B}
+}
+
+% -------------------------------------------------------------
+% AC. ACM CCS WORKSHOP / SIGIR / WWW / ICSE / CODASPY
+% -------------------------------------------------------------
+
+@inproceedings{pasquini2024neuralexec,
+  author       = {Pasquini, Dario and Strohmeier, Martin and Troncoso, Carmela},
+  title        = {Neural Exec: Learning (and Learning from) Execution Triggers for Prompt Injection Attacks},
+  booktitle    = {Proc. 2024 Workshop on Artificial Intelligence and Security (AISec '24, in conjunction with ACM CCS)},
+  year         = {2024},
+  doi          = {10.1145/3689932.3694764},
+  note         = {[O] Persists through multi-stage RAG preprocessing pipelines}
+}
+
+@inproceedings{liu2025pratttack,
+  author       = {Liu, Yang and others},
+  title        = {{PR-Attack}: Coordinated Prompt-{RAG} Attacks on Retrieval-Augmented Generation in {LLMs} via Bilevel Optimization},
+  booktitle    = {Proc. 48th Int. ACM SIGIR Conf. Research and Development in Information Retrieval},
+  year         = {2025},
+  doi          = {10.1145/3726302.3730058},
+  note         = {[O] Top-tier; joint prompt+RAG attack}
+}
+
+@inproceedings{ren2025traceback,
+  author       = {Ren, Yuwei and others},
+  title        = {Traceback of Poisoning Attacks to Retrieval-Augmented Generation},
+  booktitle    = {Proc. ACM Web Conference (WWW)},
+  year         = {2025},
+  doi          = {10.1145/3696410.3714756},
+  note         = {[O] Top-tier; forensics for RAG poisoning}
+}
+
+@inproceedings{pedro2025prompt2sql,
+  author       = {Pedro, Rodrigo and others},
+  title        = {Prompt-to-{SQL} Injections in {LLM}-Integrated Web Applications: Risks and Defenses},
+  booktitle    = {Proc. IEEE/ACM 47th International Conf. Software Engineering (ICSE)},
+  year         = {2025},
+  doi          = {10.1109/ICSE55347.2025.00007},
+  note         = {[O] Top-tier SE venue; concrete attack on RAG-style SQL apps}
+}
+
+@inproceedings{jacob2025promptshield,
+  author       = {Jacob, Dennis and Alzahrani, Hend and Hu, Zhanhao and Alomair, Basel and Wagner, David},
+  title        = {{PromptShield}: Deployable Detection for Prompt Injection Attacks},
+  booktitle    = {Proc. 15th ACM Conf. Data and Application Security and Privacy (CODASPY '25)},
+  year         = {2025},
+  doi          = {10.1145/3714393.3726501},
+  note         = {[O] UC Berkeley + KACST; achieves 65.3% TPR at 0.1% FPR vs PromptGuard 9.4%}
+}
+
+% -------------------------------------------------------------
+% AD. SIGIR 2024-2025 — RAG TRACK
+% -------------------------------------------------------------
+
+@inproceedings{hsia2024aurag,
+  author       = {Hsia, Jennifer and others},
+  title        = {{AU-RAG}: Agent-based Universal Retrieval Augmented Generation},
+  booktitle    = {Proc. 2024 Annu. Int. ACM SIGIR Conf. Research and Development in IR in Asia Pacific Region (SIGIR-AP)},
+  year         = {2024},
+  doi          = {10.1145/3673791.3698416},
+  note         = {[O] Top-tier IR venue; agentic RAG architecture}
+}
+
+@inproceedings{soudani2024finetunevsrag,
+  author       = {Soudani, Heydar and Kanoulas, Evangelos and Hasibi, Faegheh},
+  title        = {Fine Tuning vs. Retrieval Augmented Generation for Less Popular Knowledge},
+  booktitle    = {Proc. 2024 Annu. Int. ACM SIGIR Conf. Research and Development in IR in Asia Pacific Region (SIGIR-AP)},
+  year         = {2024},
+  doi          = {10.1145/3673791.3698415},
+  note         = {[O] Empirical comparison}
+}
+
+@inproceedings{salemi2024evalretrieval,
+  author       = {Salemi, Alireza and Zamani, Hamed},
+  title        = {Evaluating Retrieval Quality in Retrieval-Augmented Generation},
+  booktitle    = {Proc. 47th Int. ACM SIGIR Conf. Research and Development in Information Retrieval},
+  year         = {2024},
+  doi          = {10.1145/3626772.3657957},
+  note         = {[O] Top-tier; retrieval-quality evaluation anchor}
+}
+
+@inproceedings{ding2025rowen,
+  author       = {Ding, Hanxing and others},
+  title        = {{Rowen}: Adaptive Retrieval-Augmented Generation for Hallucination Mitigation in {LLMs}},
+  booktitle    = {Proc. 2025 Annu. Int. ACM SIGIR Conf. Research and Development in IR in Asia Pacific Region (SIGIR-AP)},
+  year         = {2025},
+  doi          = {10.1145/3767695.3769500},
+  note         = {[O] Top-tier; adaptive RAG for hallucination}
+}
+
+@inproceedings{su2025parametricrag,
+  author       = {Su, Weihang and others},
+  title        = {Parametric Retrieval Augmented Generation},
+  booktitle    = {Proc. 48th Int. ACM SIGIR Conf. Research and Development in Information Retrieval},
+  year         = {2025},
+  doi          = {10.1145/3726302.3729957},
+  note         = {[O] Top-tier; parametric RAG paradigm}
+}
+
+@inproceedings{wallat2025correctnessfaithfulness,
+  author       = {Wallat, Jonas and Heuss, Maria and de Rijke, Maarten and Anand, Avishek},
+  title        = {Correctness is not Faithfulness in {RAG} Attributions},
+  booktitle    = {Proc. 2025 ACM SIGIR Int. Conf. on the Theory of Information Retrieval (ICTIR '25)},
+  year         = {2025},
+  doi          = {10.1145/3731120.3744592},
+  note         = {[O] L3S + UvA + Delft; up to 57\% of RAG citations lack faithfulness; introduces citation-faithfulness vs citation-correctness}
+}
+
+@inproceedings{li2025oreo,
+  author       = {Li, Sha and Ramakrishnan, Naren},
+  title        = {{Oreo}: A Plug-in Context Reconstructor to Enhance Retrieval-Augmented Generation},
+  booktitle    = {Proc. 2025 ACM SIGIR Int. Conf. on the Theory of Information Retrieval (ICTIR '25)},
+  year         = {2025},
+  doi          = {10.1145/3731120.3744590},
+  note         = {[O] Virginia Tech; SFT + contrastive multi-task + RL-based alignment for retrieved-chunk reconstruction}
+}
+
+% -------------------------------------------------------------
+% AE. EMNLP / ACL 2024-2025 — RAG FAITHFULNESS / HALLUCINATION
+% -------------------------------------------------------------
+
+@inproceedings{niu2024ragtruth,
+  author       = {Niu, Cheng and Wu, Yuanhao and Zhu, Juno and Xu, Siliang and Shum, KaShun and Zhong, Randy and Song, Juntong and Zhang, Tong},
+  title        = {{RAGTruth}: A Hallucination Corpus for Developing Trustworthy Retrieval-Augmented Language Models},
+  booktitle    = {Proc. 62nd Annual Meeting of the Association for Computational Linguistics (ACL)},
+  year         = {2024},
+  url          = {https://aclanthology.org/2024.acl-long.585/},
+  note         = {[O] Foundational RAG hallucination benchmark}
+}
+
+@inproceedings{niu2024raghat,
+  author       = {Niu, Juhao and others},
+  title        = {{RAG-HAT}: A Hallucination-Aware Tuning Pipeline for {LLM} in Retrieval-Augmented Generation},
+  booktitle    = {Proc. 2024 Conf. Empirical Methods in Natural Language Processing (EMNLP) Industry Track},
+  year         = {2024},
+  url          = {https://aclanthology.org/2024.emnlp-industry.113/},
+  note         = {[O] Industry-track DPO approach}
+}
+
+@inproceedings{hu2024refchecker,
+  author       = {Hu, Xiangkun and Ru, Dongyu and Qiu, Lin and Guo, Qipeng and Zhang, Tianhang and Xu, Yang and Luo, Yun and Liu, Pengfei and Zhang, Yue and Zhang, Zheng},
+  title        = {Knowledge-Centric Hallucination Detection},
+  booktitle    = {Proc. 2024 Conf. Empirical Methods in Natural Language Processing (EMNLP)},
+  pages        = {6953--6975},
+  year         = {2024},
+  url          = {https://aclanthology.org/2024.emnlp-main.395/},
+  note         = {[O] Amazon AWS AI + Shanghai AI Lab + SJTU + Westlake; introduces RefChecker, claim-triplet hallucination detection outperforming sentence-level by 18.2-27.2 points}
+}
+
+@inproceedings{jing2024faithscore,
+  author       = {Jing, Liqiang and Li, Ruosen and Chen, Yunmo and Du, Xinya},
+  title        = {{FAITHSCORE}: Fine-grained Evaluations of Hallucinations in Large Vision-Language Models},
+  booktitle    = {Findings of the Association for Computational Linguistics: EMNLP},
+  pages        = {5042--5063},
+  year         = {2024},
+  url          = {https://aclanthology.org/2024.findings-emnlp.290/},
+  note         = {[O] UT Dallas + Johns Hopkins; reference-free atomic-fact faithfulness metric for LVLMs}
+}
+
+@inproceedings{venkit2024audithallucinations,
+  author       = {Venkit, Pranav Narayanan and Chakravorti, Tatiana and Gupta, Vipul and Biggs, Heidi and Srinath, Mukund and Goswami, Koustava and Rajtmajer, Sarah and Wilson, Shomir},
+  title        = {An Audit on the Perspectives and Challenges of Hallucinations in {NLP}},
+  booktitle    = {Proc. 2024 Conf. Empirical Methods in Natural Language Processing (EMNLP)},
+  pages        = {6528--6548},
+  year         = {2024},
+  url          = {https://aclanthology.org/2024.emnlp-main.375/},
+  note         = {[O] Penn State + Adobe + Georgia Tech; audit of 103 NLP papers + survey of 171 practitioners; calls for explicit hallucination definitions}
+}
+
+@inproceedings{tamber2025faithevolving,
+  author       = {Tamber, Manveer Singh and Bao, Forrest Sheng and Xu, Chenyu and Luo, Ge and Kazi, Suleman and Bae, Minseok and Li, Miaoran and Mendelevitch, Ofer and Qu, Renyi and Lin, Jimmy},
+  title        = {Benchmarking {LLM} Faithfulness in {RAG} with Evolving Leaderboards},
+  booktitle    = {Proc. 2025 Conf. Empirical Methods in Natural Language Processing (EMNLP) Industry Track},
+  pages        = {799--811},
+  year         = {2025},
+  url          = {https://aclanthology.org/2025.emnlp-industry.54/},
+  note         = {[O] U Waterloo + Vectara + Iowa State + Stanford; FaithJudge LLM-as-a-judge framework + leaderboard ranking 160+ LLMs}
+}
+
+% -------------------------------------------------------------
+% AF. NeurIPS 2024 DATASETS AND BENCHMARKS TRACK
+% -------------------------------------------------------------
+
+@inproceedings{ma2024agentboard,
+  author       = {Ma, Chang and Zhang, Junlei and Zhu, Zhihao and Yang, Cheng and Yang, Yujiu and Jin, Yaohui and Lan, Zhenzhong and Kong, Lingpeng and He, Junxian},
+  title        = {{AgentBoard}: An Analytical Evaluation Board of Multi-turn {LLM} Agents},
+  booktitle    = {Advances in Neural Information Processing Systems (NeurIPS) Datasets and Benchmarks Track},
+  year         = {2024},
+  url          = {https://proceedings.neurips.cc/paper_files/paper/2024/hash/877b40688e330a0e2a3fc24084208dfa-Abstract-Datasets_and_Benchmarks_Track.html},
+  note         = {[O] Top-tier; multi-turn agent benchmark}
+}
+
+@inproceedings{shen2024taskbench,
+  author       = {Shen, Yongliang and Song, Kaitao and Tan, Xu and Zhang, Wenqi and Ren, Kan and Yuan, Siyu and Lu, Weiming and Li, Dongsheng and Zhuang, Yueting},
+  title        = {{TaskBench}: Benchmarking Large Language Models for Task Automation},
+  booktitle    = {Advances in Neural Information Processing Systems (NeurIPS) Datasets and Benchmarks Track},
+  year         = {2024},
+  url          = {https://github.com/microsoft/JARVIS},
+  note         = {[O] Zhejiang + Microsoft Research Asia + Fudan; Tool Graph + back-instruct method + TaskEval methodology}
+}
+
+@inproceedings{guo2024redcode,
+  author       = {Guo, Chengquan and Liu, Xun and Xie, Chulin and Zhou, Andy and Zeng, Yi and Lin, Zinan and Song, Dawn and Li, Bo},
+  title        = {{RedCode}: Risky Code Execution and Generation Benchmark for Code Agents},
+  booktitle    = {Advances in Neural Information Processing Systems (NeurIPS) Datasets and Benchmarks Track},
+  year         = {2024},
+  url          = {https://github.com/AI-secure/RedCode},
+  note         = {[O] U Chicago + UIUC + Lapis Labs + Virginia Tech + Microsoft Research + UC Berkeley; 4000+ test cases, 25 vulnerability types, Docker sandbox}
+}
+
+@inproceedings{li2024embodiedagentinterface,
+  author       = {Li, Manling and Zhao, Shiyu and Wang, Qineng and Wang, Kangrui and Zhou, Yu and Srivastava, Sanjana and Gokmen, Cem and Lee, Tony and Li, Li Erran and Zhang, Ruohan and Liu, Weiyu and Liang, Percy and Fei-Fei, Li and Mao, Jiayuan and Wu, Jiajun},
+  title        = {Embodied Agent Interface: Benchmarking {LLM}s for Embodied Decision Making},
+  booktitle    = {Advances in Neural Information Processing Systems (NeurIPS) Datasets and Benchmarks Track, Oral},
+  year         = {2024},
+  url          = {https://openreview.net/forum?id=iSwK1YqO7v},
+  note         = {[O] NeurIPS Oral; Stanford + Northwestern + Amazon + MIT; 4 LLM-based modules with fine-grained error metrics}
+}
+
+@inproceedings{tao2024magis,
+  author       = {Tao, Wei and Zhou, Yucheng and Wang, Yanlin and Zhang, Wenqiang and Zhang, Hongyu and Cheng, Yu},
+  title        = {{MAGIS}: {LLM}-Based Multi-Agent Framework for {GitHub} Issue Resolution},
+  booktitle    = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year         = {2024},
+  note         = {[O] Fudan + U Macau + Sun Yat-sen + Chongqing + CUHK; 4 specialized agents resolve 13.94\% SWE-bench (8x GPT-4)}
+}
+
+@inproceedings{mou2024sgbench,
+  author       = {Mou, Yutao and Zhang, Shikun and Ye, Wei},
+  title        = {{SG-Bench}: Evaluating {LLM} Safety Generalization Across Diverse Tasks and Prompt Types},
+  booktitle    = {Advances in Neural Information Processing Systems (NeurIPS) Datasets and Benchmarks Track},
+  year         = {2024},
+  url          = {https://github.com/MurrayTom/SG-Bench},
+  note         = {[O] Peking U; tests 3 proprietary + 10 open-source LLMs; reveals worse performance on discriminative vs generative}
+}
+
+@inproceedings{motwani2024secretcollusion,
+  author       = {Motwani, Sumeet Ramesh and Baranchuk, Mikhail and Strohmeier, Martin and Bolina, Vijay and Torr, Philip H. S. and Hammond, Lewis and de Witt, Christian Schroeder},
+  title        = {Secret Collusion among Generative {AI} Agents: Multi-Agent Deception via Steganography},
+  booktitle    = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year         = {2024},
+  note         = {[O] Foundational for multi-agent governance: agents can hide collusion in plain text via steganography}
+}
+
+@inproceedings{xie2024finben,
+  author       = {Xie, Qianqian and Han, Weiguang and Chen, Zhengyu and Xiang, Ruoyu and Zhang, Xiao and He, Yueru and Xiao, Mengxi and Li, Dong and Dai, Yongfu and Feng, Duanyu and Xu, Yijing and Kang, Haoqiang and Kuang, Ziyan and Yuan, Chenhan and Yang, Kailai and Luo, Zheheng and Zhang, Tianlin and Liu, Zhiwei and Xiong, Guojun and Deng, Zhiyang and Jiang, Yuechen and Yao, Zhiyuan and Li, Haohang and Yu, Yangyang and Hu, Gang and Huang, Jiajia and Liu, Xiao-Yang and Lopez-Lira, Alejandro and Wang, Benyou and Lai, Yanzhao and Wang, Hao and Peng, Min and Ananiadou, Sophia and Huang, Jimin},
+  title        = {{FinBen}: A Holistic Financial Benchmark for Large Language Models},
+  booktitle    = {Advances in Neural Information Processing Systems (NeurIPS) Datasets and Benchmarks Track},
+  year         = {2024},
+  url          = {https://github.com/The-FinAI/PIXIU},
+  note         = {[O] 42 datasets, 24 financial tasks, 21 LLMs; first to evaluate stock-trading and agent/RAG in finance}
+}
+
+% -------------------------------------------------------------
+% AG. IEEE XPLORE — JOURNALS AND CONFERENCES 2024-2025
+% -------------------------------------------------------------
+
+@article{llmcloudsec2024,
+  author       = {Anonymous},
+  title        = {{LLM-CloudSec}: Large Language Model Empowered Automatic and Deep Vulnerability Analysis for Intelligent Clouds},
+  journal      = {IEEE Conference Publication},
+  year         = {2024},
+  url          = {https://ieeexplore.ieee.org/document/10620804/},
+  note         = {[O] RAG-based cloud vulnerability analysis}
+}
+
+@inproceedings{privacysecurityllm2024ieee,
+  author       = {Anonymous},
+  title        = {Privacy and Security Challenges in Large Language Models},
+  booktitle    = {IEEE Conference Publication},
+  year         = {2024},
+  url          = {https://ieeexplore.ieee.org/document/10903912},
+  note         = {[O] Survey of prompt injection, data leakage, unauthorized disclosure}
+}
+
+@article{llmmultiagentdecision2025ieee,
+  author       = {Anonymous},
+  title        = {{LLM}-Based Multi-Agent Decision-Making: Challenges and Future Directions},
+  journal      = {IEEE Journals \& Magazine},
+  year         = {2025},
+  url          = {https://ieeexplore.ieee.org/document/10970024/},
+  note         = {[O] IEEE journal; multi-agent decision-making survey}
+}
+
+@inproceedings{llmcicdenterprise2025ieee,
+  author       = {Anonymous},
+  title        = {Practical Integration of Large Language Models into Enterprise {CI/CD} Pipelines for Security Policy Validation: An Industry-Focused Evaluation},
+  booktitle    = {IEEE Conference Publication},
+  year         = {2025},
+  url          = {https://ieeexplore.ieee.org/document/11126149/},
+  note         = {[O] Industry-focused enterprise CI/CD with Kubernetes/IAM/Terraform validation}
+}
+
+@inproceedings{llmcodesecuritysurvey2024ieee,
+  author       = {Anonymous},
+  title        = {State of the Art of the Security of Code Generated by {LLMs}: A Systematic Literature Review},
+  booktitle    = {IEEE Conference Publication},
+  year         = {2024},
+  url          = {https://ieeexplore.ieee.org/document/10795572/},
+  note         = {[O] Adjacent SLR}
+}
+
+@article{llmcybersecurity2024ieee,
+  author       = {Anonymous},
+  title        = {Large Language Models for Cybersecurity: New Opportunities},
+  journal      = {IEEE Journals \& Magazine},
+  year         = {2024},
+  url          = {https://ieeexplore.ieee.org/document/10803029/},
+  note         = {[O] IEEE magazine; cyber-defensive uses of LLMs}
+}
+
+@inproceedings{llmenterprise2024ieee,
+  author       = {Anonymous},
+  title        = {Popular {LLM}-Large Language Models in Enterprise Applications},
+  booktitle    = {IEEE Conference Publication},
+  year         = {2024},
+  url          = {https://ieeexplore.ieee.org/document/10852443/},
+  note         = {[O] Enterprise LLM context}
+}
+
+@inproceedings{ragqaevolution2025ieee,
+  author       = {Anonymous},
+  title        = {{RAG} Powered {LLMs} for {QA}: Evolution, Challenges, Applications, and Future Directions},
+  booktitle    = {IEEE Conference Publication},
+  year         = {2025},
+  url          = {https://ieeexplore.ieee.org/iel8/11033710/11034386/11034531.pdf},
+  note         = {[O] Adjacent overview}
+}
+
+

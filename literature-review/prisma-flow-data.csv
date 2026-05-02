@@ -1,0 +1,14 @@
+stage,count,notes
+identified_databases,392,"Unique records identified across IEEE Xplore, ACM DL, USENIX Security, NDSS, IEEE S&P, ACL Anthology, OpenReview, NeurIPS proceedings, arXiv, ACL Anthology, MDPI, Springer, Elsevier ScienceDirect, NIST, OWASP via 80+ search-string executions across three rounds"
+identified_other_sources,28,"Citation chasing on Singh et al. 2025, Greshake et al. 2023, PoisonedRAG, Deng et al. 2025, Mohammadi et al. 2025, plus standards bodies"
+total_identified,420,
+duplicates_removed,89,"Cross-database overlap (arXiv preprints with peer-reviewed venue versions, plus reposted versions)"
+records_after_dedup,331,
+title_screened,331,
+title_excluded,98,"Off-topic, vendor marketing, opinion pieces"
+abstract_screened,233,
+abstract_excluded,55,"Insufficient technical detail, outside RQ scope, lower-quality venues, redundant"
+fulltext_screened,178,
+fulltext_excluded,29,"On full-text or abstract review: out of scope, redundant with stronger papers, or claims unverifiable"
+final_corpus,149,"Phase 6 round 3 corpus committed to selected-papers.bib (round 1=71, round 2=33, round 3=45). Now 60% peer-reviewed conference + 18% peer-reviewed journal + 7% standards/governance + 15% preprint where peer-reviewed equivalent absent."
+notes,"Counts will be re-frozen at 30-day-pre-submission refresh. Round 4 planned to add 50-70 more entries from: enterprise IEEE/ACM application papers (financial, healthcare, manufacturing), AAAI/IJCAI/KDD multi-agent papers, vector database research (Milvus, Pinecone, Weaviate benchmarks), foundational pre-2021 anchors (BERT/Transformer/RLHF/InstructGPT), MLOps industry papers, and additional ISO/IEC standards.",

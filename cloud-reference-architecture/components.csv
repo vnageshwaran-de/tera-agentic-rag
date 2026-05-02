@@ -1,0 +1,19 @@
+id,component,function,design_options,failure_risks,security_control,observability_signal,bib_keys
+C1,Ingestion service,Source pull / parse / chunk,"Batch;Streaming;Event-driven",Source poisoning,Source allow-list + content scan,Bytes ingested; source-auth fail rate,N/A
+C2,Embedding pipeline,Generate dense vectors,"E5;BGE-M3;ColBERT;OpenAI/Voyage",Embedding inversion,Encrypted at rest + ACL,Embedding latency; dimension drift,khattab2020colbert;wang2024e5;chen2024bgem3;embeddinginversion2024arxiv
+C3,Vector / graph store,Index and serve retrieval,"Milvus;pgvector;OpenSearch;KG store",Cross-tenant leakage,Tenant isolation; RBAC,Query rate; p95 latency; hit ratio,N/A
+C4,Retrieval service,Sparse + dense + rerank,"BM25 + dense hybrid;late-interaction",Jamming,Rate-limit; anomaly detection,Retrieval-quality metric; rerank gain,salemi2024evalretrieval;shafran2025jamming
+C5,LLM gateway,Model routing and cost shaping,"Multi-model fallback;MCP",Model supply-chain risk,Model hash pinning,Tokens per request; error rate,anthropic2024mcp
+C6,Agent orchestrator,Plan-execute loop,"Single;Multi-agent;Hierarchical",Coordination failure,Inter-agent message audit,Steps per task; role-fidelity,wu2024autogen;hong2024metagpt
+C7,Tool / API gateway,Function calling and side effects,"OpenAPI;MCP;gRPC",ToolHijacker,Hash-pinned tools; ACL,Tool-call success; side-effect log,shi2026toolhijacker;anthropic2024mcp
+C8,Policy engine,Rule-based gating,"OPA;LLM-judge",Policy bypass,Decision-log audit,Allow/deny rate,N/A
+C9,Evaluation harness,Pre and online evaluation,"RAGAS;ARES;SYNCHECK",Eval drift,Eval-corpus versioning,Eval-pass rate; regression alerts,esragas2024;saadfalcon2024ares;wu2024synccheck
+C10,Memory store,Short and long-term memory,"Redis cache;vector store",Memory poisoning,Memory ACL + lineage,Memory growth; write rate,memorygraft2025;chen2024agentpoison
+C11,Human-approval service,HITL checkpoints,"Slack-bot;queue;web UI",Approval bypass,Cryptographic sign-off,Escalation rate; approval latency,hitl2025entropy
+C12,Audit log store,Write-once event log,"Append-only;time-series",Tampering,WORM storage; signed events,Event volume; gap detection,nist2024genaiprofile
+C13,Observability layer,Tracing and metrics,"OpenTelemetry GenAI",Coverage gap,End-to-end correlation IDs,Trace completeness; span drop rate,otel2024genai
+C14,Secrets manager,Key handling,"KMS;Vault",Key leak,Per-agent identity,Secret-fetch audit,N/A
+C15,Network boundary,Egress and segmentation,"VPC;private endpoints",Lateral movement,Default deny + allow-list,Egress volume; deny rate,N/A
+C16,IAM,Identity / role / scope,"OIDC;mTLS",Over-permission,Least privilege per agent,Permission-mismatch rate,csa2025aicm
+C17,CI/CD pipeline,Versioning / deploy / rollback,"GitOps;blue-green",Bad deploy,Eval-gated promotion,Deploy success; rollback rate,llmcicdenterprise2025ieee
+C18,Drift detection,Monitor distributions,"Embedding drift;retrieval drift",Silent regression,Alert thresholds,KL divergence; retrieval delta,mdpi2025mlopstoLlmops

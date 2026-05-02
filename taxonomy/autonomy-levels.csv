@@ -1,0 +1,5 @@
+id,level,description,human_oversight,example_use_cases,bib_keys,recommended_controls
+A1,Advisory,System suggests; human decides and acts,Always in the loop,"Knowledge assistants;Editorial fact-check tools","hitl2025entropy",C4 mandatory approval; suggestion-only UI
+A2,Assisted,System drafts/executes routine actions; human reviews,On the loop with sampling,"Code assistants;Automated triage","hitl2025entropy;qian2024chatdev",C4 sampling review; C3 outcome telemetry
+A3,Supervised action,System acts within sandboxed scope; human approves high-risk,Tiered HITL gates,"Compliance assistants;Customer-support actions","hitl2025entropy;springer2025agenticarchitectures",C4 tiered approvals; C1 sandbox; reversal capability
+A4,Autonomous action,System acts; human reviews ex-post,Out of the loop with audit,"AIOps remediation;Robotic process automation","springer2025agenticarchitectures",C2 robust eval; C3 full trace; C4 audit + rollback; C5 incident response

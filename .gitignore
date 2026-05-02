@@ -1,0 +1,57 @@
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+.tox/
+.coverage
+.coverage.*
+.cache
+htmlcov/
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Repository-specific exclusions
+# Do NOT commit copyrighted full-text PDFs of cited works.
+*.pdf
+!figures/*.pdf
+
+# Do NOT commit credentials or internal architecture artifacts.
+*.key
+*.pem
+secrets/
+private/
+internal/

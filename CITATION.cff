@@ -1,0 +1,59 @@
+cff-version: 1.2.0
+title: >-
+  Trustworthy Agentic RAG for Enterprise AI: A Systematic
+  Survey and Framework for Architectures, Evaluation,
+  Security, Governance, and Cloud-Native Deployment
+message: >-
+  If you use this software or the artifacts in this repository,
+  please cite both the article and the archived release.
+type: software
+authors:
+  - given-names: Vinoth
+    family-names: Nageshwaran
+    email: vnageshwaran@gmail.com
+    affiliation: 'Business Insider, New York, NY, USA'
+    orcid: 'https://orcid.org/PLACEHOLDER'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.PLACEHOLDER
+    description: 'Zenodo archive of the v1.0 release; DOI to be assigned at acceptance'
+repository-code: 'https://github.com/vnageshwaran-de/tera-agentic-rag'
+url: 'https://github.com/vnageshwaran-de/tera-agentic-rag'
+abstract: >-
+  Companion artifacts for an IEEE Access survey article on
+  trustworthy agentic Retrieval-Augmented Generation in
+  enterprise settings. The repository releases the
+  systematic-review protocol, search strings, screening log,
+  bibliography, and the reusable artifacts of the TERA
+  framework: an eight-dimension taxonomy, a threat-to-control
+  matrix, an agentic-RAG evaluation matrix, a cloud-native
+  reference architecture component model, a governance and
+  human-oversight checklist, an enterprise lifecycle model,
+  and a research roadmap.
+keywords:
+  - agentic AI
+  - artificial intelligence governance
+  - cloud computing
+  - enterprise AI
+  - large language model agents
+  - LLMOps
+  - MLOps
+  - prompt injection
+  - retrieval-augmented generation
+  - trustworthy AI
+license: CC-BY-4.0
+version: 0.9.0
+date-released: '2026-05-01'
+preferred-citation:
+  type: article
+  authors:
+    - given-names: Vinoth
+      family-names: Nageshwaran
+      affiliation: 'Business Insider, New York, NY, USA'
+  title: >-
+    Trustworthy Agentic RAG for Enterprise AI: A Systematic
+    Survey and Framework for Architectures, Evaluation,
+    Security, Governance, and Cloud-Native Deployment
+  journal: 'IEEE Access'
+  year: 2026
+  notes: 'In preparation. Replace with volume/issue/pages and DOI on acceptance.'

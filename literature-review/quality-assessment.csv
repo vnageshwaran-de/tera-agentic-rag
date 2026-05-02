@@ -1,0 +1,5 @@
+id,bibtex_key,technical_relevance,methodological_rigor,empirical_validation,reproducibility,clarity_of_evaluation,enterprise_cloud_relevance,security_governance_relevance,source_authority,aggregate,full_text_reviewed,notes
+# Schema: each metric scored 0 (none) / 1 (partial) / 2 (substantive). Aggregate is the sum (max 16). Below-6 entries are admitted only when uniquely necessary; flag in notes column.
+,,,,,,,,,,,,
+,,Template row — populate during Phase 8 drafting,,,,,,,,,,
+,,,,,,,,,,,,

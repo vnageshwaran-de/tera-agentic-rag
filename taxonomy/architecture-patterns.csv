@@ -1,0 +1,15 @@
+id,pattern,key_components,bib_keys,advantages,limitations,enterprise_use_cases,required_controls
+P1,Naive RAG,Retriever + generator,lewis2020rag,Simple; low cost,Brittle to retrieval noise,Internal QA; FAQ,C1 input filter; C2 retrieval-quality eval
+P2,Advanced RAG,+ reranker; query rewrite,gao2024ragsurvey,Higher relevance,Cost; latency,Customer-knowledge assistants,+ C3 retrieval observability
+P3,Modular RAG,Reconfigurable modules,gao2024modularrag,Reusable; testable,Integration complexity,Multi-domain assistants,+ C5 module versioning
+P4,Self-RAG,Reflection tokens,asai2024selfrag,Reduces over-retrieval,Training cost,Editorial fact-check,+ C2 faithfulness eval (RAGAS/ARES)
+P5,Corrective RAG,Quality-gated retrieval,N/A,Robust to noise,Latency overhead,Compliance Q&A,+ C2 SYNCHECK monitoring
+P6,Graph RAG,KG + community summaries,edge2024graphrag;graphrag2024ieee,Multi-doc reasoning,KG curation cost,Enterprise knowledge graphs,+ C4 lineage on KG edges
+P7,Multimodal RAG,Image/text/video retrieval,N/A,Domain coverage,Multimodal injection risk,Editorial photo/video archives,+ C1 multimodal validators
+P8,Multi-agent RAG,Specialist agents + orchestrator,wu2024autogen;hong2024metagpt;qian2024chatdev;tao2024magis,Decomposition; parallelism,Collusion; coordination failure,Software engineering agents,+ C1 inter-agent messaging audit; C4 role-policy enforcement
+P9,Tool-augmented RAG,Tool gateway; function calling,schick2023toolformer;qin2023toolllm;anthropic2024mcp,External capability,Tool misuse; ToolHijacker,Workflow automation,+ C1 structured queries (StruQ); C4 tool ACLs
+P10,Human-in-the-loop RAG,Approval checkpoints,hitl2025entropy,Risk-tiered control,Latency at gate,Legal; financial actions,+ C4 evidence artifacts; escalation logs
+P11,Agentic Universal RAG,Agent-routed retrieval,hsia2024aurag,Source-agnostic,Routing complexity,Multi-source enterprise knowledge,+ C2 per-source quality SLO
+P12,Reasoning Agentic RAG,System-1/System-2 reasoning agents,ragreasoning2025acl;ragdeepreasoning2025,Deep reasoning,Higher latency/cost,High-stakes analysis,+ C3 plan-trace observability
+P13,Parametric RAG,Knowledge-into-parameters,su2025parametricrag,Reduced retrieval cost,Training overhead,Domain-specialized agents,+ C5 retraining governance
+P14,Adaptive RAG (Rowen),Hallucination-aware adaptive retrieval,ding2025rowen,Mitigates hallucination,Adaptive logic complexity,Mission-critical Q&A,+ C2 adaptive faithfulness gates

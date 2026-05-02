@@ -1,0 +1,34 @@
+id,capability,benchmark_or_metric,bib_key,task_category,measure,strengths,limitations,enterprise_relevance,advisory,assisted,supervised,autonomous
+B1,Retrieval quality,BEIR,thakur2021beir,Zero-shot IR,NDCG@10;recall,Foundational baseline;18 datasets,Pre-LLM,High,Y,Y,Y,Y
+B2,Retrieval quality,MTEB,muennighoff2023mteb,Embedding ranking,Massive multitask,Comprehensive embedding eval,Pre-LLM,Medium,Y,Y,Y,Y
+B3,Retrieval quality,Eval-Retrieval-Quality (RAG-aware),salemi2024evalretrieval,RAG retrieval,Retrieval x generation,RAG-specific,Newer; less coverage,High,Y,Y,Y,Y
+B4,Faithfulness,RAGAS,esragas2024,RAG eval,"Faithfulness;answer relevancy;context precision/recall",Reference-free; production-ready,Reliance on LLM judge,Very high,Y,Y,Y,Y
+B5,Faithfulness,ARES,saadfalcon2024ares,RAG eval,Trained judge,Strong human correlation,Training cost,High,Y,Y,Y,Y
+B6,Faithfulness,RefChecker,hu2024refchecker,RAG eval,Claim-triplet,+18-27 pts vs sentence-level,Triplet extraction cost,High,Y,Y,Y,Y
+B7,Faithfulness,RAGTruth,niu2024ragtruth,RAG eval,Hallucination corpus,Training data,Static,Medium,N,Y,Y,Y
+B8,Faithfulness,SYNCHECK,wu2024synccheck,RAG eval,Real-time monitor,Online deployment,Latency,Very high,Y,Y,Y,Y
+B9,Faithfulness,Rowen,ding2025rowen,Adaptive RAG,Hallucination mitigation,Adaptive retrieval gate,Logic complexity,High,Y,Y,Y,Y
+B10,Faithfulness,FaithJudge / Vectara HHEM,tamber2025faithevolving,RAG eval,LLM-as-judge,Evolving leaderboard; 160+ LLMs,Judge bias risk,High,Y,Y,Y,Y
+B11,Faithfulness,Citation faithfulness,wallat2025correctnessfaithfulness,RAG attribution,Post-rationalization test,Reveals 57% citation failure,Subset of attribution,High,N,Y,Y,Y
+B12,Hallucination,TruthfulQA,lin2022truthfulqa,Factuality QA,Adversarial questions,Foundational,Open-domain only,Medium,Y,Y,Y,Y
+B13,Hallucination,HaluEval,li2023halueval,Hallucination detection,Multi-task,Diverse tasks,Training-eval mix,Medium,Y,Y,Y,Y
+B14,Hallucination,FActScore,min2023factscore,Long-form factuality,Atomic precision,Fine-grained,Cost,Medium,Y,Y,Y,Y
+B15,Hallucination,FAITHSCORE,jing2024faithscore,Multimodal hallucination,Atomic LVLM,Multimodal,Vision-language scope,Domain-specific,N,Y,Y,Y
+B16,Agent capability,AgentBench,liu2024agentbench,Multi-environment,Task-success across 8 envs,Comprehensive,Coverage gaps,High,N,Y,Y,Y
+B17,Agent capability,GAIA,mialon2023gaia,General assistant,Real-world QA,High difficulty,Limited size,Medium,N,Y,Y,Y
+B18,Agent capability,SWE-bench,jimenez2024swebench,Software engineering,Real GitHub issues,Realistic,Single domain,Domain-specific,N,N,Y,Y
+B19,Agent capability,ToolBench,qin2023toolllm,Tool use,16k+ APIs,Scale,Older toolset,High,N,Y,Y,Y
+B20,Agent capability,BFCL,patil2025bfcl,Function calling,Mainstream,Standard,API drift,High,N,Y,Y,Y
+B21,Agent capability,AgentBoard,ma2024agentboard,Multi-turn agents,Analytical metrics,Process-aware,Limited domains,High,N,Y,Y,Y
+B22,Agent capability,TaskBench,shen2024taskbench,Task automation,Tool graph + back-instruct,Methodologically sound,Tool-centric,High,N,Y,Y,Y
+B23,Computer use,OSWorld,xie2024osworld,Real OS tasks,Open-ended,Realistic,Hard to score,Medium,N,N,Y,Y
+B24,Computer use,WebArena,zhou2024webarena,Web tasks,Realistic web nav,Production-like,Curated tasks,Medium,N,N,Y,Y
+B25,Embodied,Embodied Agent Interface,li2024embodiedagentinterface,Decision making,4 modules / fine-grained errors,Deep diagnostic,Embodied focus,Domain-specific,N,N,Y,Y
+B26,Safety,HarmBench,mazeika2024harmbench,Red teaming,Standardized refusal,Comparable,Static prompts,High,Y,Y,Y,Y
+B27,Safety,AILuminate v1.0,ailuminate2025,AI risk + reliability,Industry-standard,MLCommons,Coverage limits,High,Y,Y,Y,Y
+B28,Safety,SG-Bench,mou2024sgbench,Safety generalization,Discriminative + generative,Cross-prompt-type,Coverage,High,Y,Y,Y,Y
+B29,Adversarial robustness,Agent Security Bench,zhang2025agentsecuritybench,Agent attacks/defenses,27 attack/defense combos,Comprehensive,New,Very high,N,Y,Y,Y
+B30,Adversarial robustness,AgentDojo,debenedetti2024agentdojo,Tool-use injection,Realistic,NeurIPS dataset,Tool focus,High,N,Y,Y,Y
+B31,Adversarial robustness,InjecAgent,zhan2024injecagent,Indirect injection,Tool-integrated,Targeted,Single class,High,N,Y,Y,Y
+B32,Domain,FinBen,xie2024finben,Financial tasks,42 datasets / 24 tasks / 21 LLMs,Comprehensive,Single domain,Domain-specific,Y,Y,Y,Y
+B33,Holistic,HELM,liang2023helm,LM evaluation,Multi-metric,Foundational,Generic,Medium,Y,Y,Y,Y

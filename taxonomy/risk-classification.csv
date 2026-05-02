@@ -1,0 +1,5 @@
+id,risk_class,description,examples,regulatory_anchor,bib_keys,minimum_controls
+R1,Low-stakes,Reversible advisory output with negligible consequence,"Internal QA chatbot; meeting summarizer",None mandated,N/A,Basic eval; logging
+R2,Business-critical,System reliability impacts revenue or operations,"Customer support; sales enablement; AIOps","Internal SOX-style controls","nist2024genaiprofile",Eval SLO; HITL on edge cases; audit trail
+R3,Regulated,Subject to sectoral regulation,"Healthcare assistants;Financial advisors;Legal research","HIPAA;SOX;FINRA;EU AI Act limited-risk","euaiact2024;nist2024genaiprofile",DSAR support; data residency; sector audit
+R4,Safety-critical,Direct physical or material consequence of error,"Industrial control;Robotic operation;Autonomous remediation","EU AI Act high-risk;FDA;ISO 26262 analogs","euaiact2024;iso420012023",Conformance assessment; mandatory HITL; pre-action verification; rollback on every action
