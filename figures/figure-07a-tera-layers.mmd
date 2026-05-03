@@ -1,0 +1,20 @@
+%% Figure 7(a) — TERA framework, stacked layered view (L0–L5).
+%% Sub-panels (b) cross-cutting concerns and (c) editorial / content-analytics worked-example overlay are drawn in draw.io.
+%% Render: bash scripts/render-mermaid-figures.sh
+
+flowchart TB
+    classDef l0 fill:#f6f6f6,stroke:#333,stroke-width:1px,color:#000
+    classDef l1 fill:#eef5fb,stroke:#1a4f9c,stroke-width:1px,color:#000
+    classDef l2 fill:#e8f7ee,stroke:#1a7c3c,stroke-width:1px,color:#000
+    classDef l3 fill:#fff8e6,stroke:#9c6a1a,stroke-width:1px,color:#000
+    classDef l4 fill:#fdebef,stroke:#a32940,stroke-width:1px,color:#000
+    classDef l5 fill:#f0e8fb,stroke:#5b1a9c,stroke-width:1px,color:#000
+
+    L5["L5  Application and orchestration"]:::l5
+    L4["L4  Tool and action"]:::l4
+    L3["L3  Reasoning and planning"]:::l3
+    L2["L2  Retrieval"]:::l2
+    L1["L1  Data and knowledge"]:::l1
+    L0["L0  Cloud foundation"]:::l0
+
+    L0 --> L1 --> L2 --> L3 --> L4 --> L5

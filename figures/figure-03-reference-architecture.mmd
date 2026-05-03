@@ -1,0 +1,55 @@
+%% Figure 3 — Cloud-native reference architecture for trustworthy enterprise agentic RAG.
+%% Eighteen vendor-neutral components organized along TERA L0 -> L5 with explicit trust boundaries.
+%% Render: mermaid-cli -i figure-03-reference-architecture.mmd -o figure-03-reference-architecture.pdf -e pdf
+
+flowchart TB
+    classDef l0 fill:#f6f6f6,stroke:#333,stroke-width:1px,color:#000
+    classDef l1 fill:#eef5fb,stroke:#1a4f9c,stroke-width:1px,color:#000
+    classDef l2 fill:#e8f7ee,stroke:#1a7c3c,stroke-width:1px,color:#000
+    classDef l3 fill:#fff8e6,stroke:#9c6a1a,stroke-width:1px,color:#000
+    classDef l4 fill:#fdebef,stroke:#a32940,stroke-width:1px,color:#000
+    classDef l5 fill:#f0e8fb,stroke:#5b1a9c,stroke-width:1px,color:#000
+
+    subgraph L5["L5  Application and orchestration"]
+      direction LR
+      C5a["LLM gateway"]:::l5
+      C11["Human-approval service"]:::l5
+      C5b["User-facing application"]:::l5
+    end
+
+    subgraph L4["L4  Tool and action  -- action trust boundary --"]
+      direction LR
+      C7["Tool / API gateway"]:::l4
+      C8["Policy engine"]:::l4
+    end
+
+    subgraph L3["L3  Reasoning and planning"]
+      direction LR
+      C6["Agent orchestrator"]:::l3
+      C10["Memory store"]:::l3
+    end
+
+    subgraph L2["L2  Retrieval"]
+      C4["Retrieval service<br/>(sparse + dense + rerank)"]:::l2
+    end
+
+    subgraph L1["L1  Data and knowledge  -- data trust boundary --"]
+      direction LR
+      C1["Ingestion service"]:::l1
+      C2["Embedding pipeline"]:::l1
+      C3["Vector / graph store"]:::l1
+    end
+
+    subgraph L0["L0  Cloud foundation"]
+      direction LR
+      C12["Audit log store"]:::l0
+      C13["Observability layer<br/>(OpenTelemetry GenAI)"]:::l0
+      C14["Secrets manager (KMS)"]:::l0
+      C15["Network boundary"]:::l0
+      C16["IAM"]:::l0
+      C17["CI/CD pipeline"]:::l0
+      C18["Drift detection"]:::l0
+      C9["Evaluation harness"]:::l0
+    end
+
+    L0 --> L1 --> L2 --> L3 --> L4 --> L5

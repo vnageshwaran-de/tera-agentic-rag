@@ -1,0 +1,28 @@
+%% Figure 6 — Governance and human-oversight loop.
+%% Anchored in NIST AI 600-1, OWASP Agentic Top 10, ISO/IEC 42001, CSA AICM.
+%% Render: mermaid-cli -i figure-06-governance-loop.mmd -o figure-06-governance-loop.pdf -e pdf
+
+flowchart LR
+    classDef dev fill:#eef5fb,stroke:#1a4f9c,stroke-width:1px,color:#000
+    classDef ops fill:#fff8e6,stroke:#9c6a1a,stroke-width:1px,color:#000
+    classDef center fill:#f0fff4,stroke:#080,stroke-width:1.5px,color:#000
+
+    subgraph Development
+      D1["Risk classification<br/>(D7)"]:::dev
+      D2["Threat-model review"]:::dev
+      D3["Eval-gated promotion"]:::dev
+      D4["Red-team release gate"]:::dev
+    end
+
+    subgraph Operations
+      O1["Runtime guardrails"]:::ops
+      O2["HITL approvals"]:::ops
+      O3["Drift detection"]:::ops
+      O4["Incident response"]:::ops
+    end
+
+    R["Evidence and<br/>control review<br/>(audit log,<br/>provenance,<br/>signed events)"]:::center
+
+    D1 --> D2 --> D3 --> D4 --> R
+    R --> O1 --> O2 --> O3 --> O4 --> R
+    R --> D1

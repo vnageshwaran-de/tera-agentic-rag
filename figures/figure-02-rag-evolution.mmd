@@ -1,0 +1,13 @@
+%% Figure 2 — Evolution from naive RAG to advanced RAG to modular RAG to agentic RAG.
+%% Render: mermaid-cli -i figure-02-rag-evolution.mmd -o figure-02-rag-evolution.pdf -e pdf
+
+flowchart LR
+    classDef base fill:#f6f6f6,stroke:#333,stroke-width:1px,color:#000
+    classDef agentic fill:#e8f0fe,stroke:#1a4f9c,stroke-width:1.5px,color:#000
+
+    A["Naive RAG<br/>retrieve + generate"]:::base
+    B["Advanced RAG<br/>+ rerank, query rewrite"]:::base
+    C["Modular RAG<br/>+ reconfigurable modules"]:::base
+    D["Agentic RAG<br/>+ planning, memory,<br/>tool use, action"]:::agentic
+
+    A --> B --> C --> D

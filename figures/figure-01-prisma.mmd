@@ -1,0 +1,26 @@
+%% Figure 1 — PRISMA-style literature-selection flow.
+%% Counts: 392 + 28 = 420 identified -> 89 deduped -> 331 -> 98 excluded at title -> 233 -> 55 excluded at abstract -> 178 -> 29 excluded at full text -> 149 included.
+%% Render: mermaid-cli -i figure-01-prisma.mmd -o figure-01-prisma.pdf -e pdf -b transparent
+
+flowchart TD
+    classDef stage fill:#f6f6f6,stroke:#333,stroke-width:1px,color:#000
+    classDef excl  fill:#fff5f5,stroke:#a00,stroke-width:1px,color:#000
+    classDef incl  fill:#f0fff4,stroke:#080,stroke-width:1.5px,color:#000
+
+    A["Identification<br/>Records from databases: 392<br/>Records from other sources: 28<br/>Total: 420"]:::stage
+    B["Records after deduplication<br/>n = 331<br/>(89 duplicates removed)"]:::stage
+    C["Title screening<br/>n = 331"]:::stage
+    Cx["Excluded at title<br/>n = 98"]:::excl
+    D["Abstract screening<br/>n = 233"]:::stage
+    Dx["Excluded at abstract<br/>n = 55"]:::excl
+    E["Full-text screening<br/>n = 178"]:::stage
+    Ex["Excluded at full text<br/>n = 29"]:::excl
+    F["Included in synthesis<br/>n = 149"]:::incl
+
+    A --> B --> C
+    C --> Cx
+    C --> D
+    D --> Dx
+    D --> E
+    E --> Ex
+    E --> F

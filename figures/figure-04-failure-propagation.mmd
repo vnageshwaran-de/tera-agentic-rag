@@ -1,0 +1,26 @@
+%% Figure 4 — Failure propagation across L1 -> L5: indirect prompt injection example.
+%% Source: Greshake et al. AISec'23; AgentDojo NeurIPS'24; ToolHijacker NDSS'26.
+%% Render: mermaid-cli -i figure-04-failure-propagation.mmd -o figure-04-failure-propagation.pdf -e pdf
+
+flowchart LR
+    classDef layer fill:#f6f6f6,stroke:#333,stroke-width:1px,color:#000
+    classDef miss fill:#fff5f5,stroke:#a00,stroke-width:1px,color:#000,font-size:11px
+
+    L1["L1 — Data ingestion<br/>poisoned external doc"]:::layer
+    L2["L2 — Retrieval<br/>doc surfaced in top-k"]:::layer
+    L3["L3 — Reasoning<br/>injected instructions<br/>parsed as user intent"]:::layer
+    L4["L4 — Tool / action<br/>unauthorized tool call"]:::layer
+    L5["L5 — Application<br/>action surfaced to user"]:::layer
+
+    M1["missing control:<br/>source allow-list"]:::miss
+    M2["missing control:<br/>retrieval anomaly check"]:::miss
+    M3["missing control:<br/>structured queries (StruQ)"]:::miss
+    M4["missing control:<br/>tool ACL + HITL gate"]:::miss
+    M5["missing control:<br/>output safety classifier"]:::miss
+
+    L1 --> L2 --> L3 --> L4 --> L5
+    L1 -.- M1
+    L2 -.- M2
+    L3 -.- M3
+    L4 -.- M4
+    L5 -.- M5

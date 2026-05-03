@@ -12,10 +12,10 @@ authors:
     family-names: Nageshwaran
     email: vnageshwaran@gmail.com
     affiliation: 'Business Insider, New York, NY, USA'
-    orcid: 'https://orcid.org/PLACEHOLDER'
+    orcid: 'https://orcid.org/0009-0004-0332-231X'
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.PLACEHOLDER
+    value: 10.5281/zenodo.19995089
     description: 'Zenodo archive of the v1.0 release; DOI to be assigned at acceptance'
 repository-code: 'https://github.com/vnageshwaran-de/tera-agentic-rag'
 url: 'https://github.com/vnageshwaran-de/tera-agentic-rag'
@@ -50,6 +50,7 @@ preferred-citation:
     - given-names: Vinoth
       family-names: Nageshwaran
       affiliation: 'Business Insider, New York, NY, USA'
+      orcid: 'https://orcid.org/0009-0004-0332-231X'
   title: >-
     Trustworthy Agentic RAG for Enterprise AI: A Systematic
     Survey and Framework for Architectures, Evaluation,

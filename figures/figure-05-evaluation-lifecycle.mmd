@@ -1,0 +1,12 @@
+%% Figure 5 — Evaluation lifecycle for agentic RAG.
+%% Render: mermaid-cli -i figure-05-evaluation-lifecycle.mmd -o figure-05-evaluation-lifecycle.pdf -e pdf
+
+flowchart LR
+    classDef phase fill:#f6f6f6,stroke:#333,stroke-width:1px,color:#000
+
+    P1["Pre-deployment<br/>retrieval-quality;<br/>faithfulness;<br/>capability;<br/>safety + adversarial"]:::phase
+    P2["CI/CD eval gate<br/>regression test;<br/>release blocker;<br/>signed eval report"]:::phase
+    P3["Online eval<br/>SYNCHECK;<br/>RAGAS sampling;<br/>cost / latency / error"]:::phase
+    P4["Drift detection<br/>embedding;<br/>retrieval;<br/>faithfulness;<br/>outcome"]:::phase
+
+    P1 --> P2 --> P3 --> P4 --> P1
