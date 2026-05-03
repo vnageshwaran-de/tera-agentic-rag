@@ -1,108 +1,399 @@
-# Governance and Human-Oversight Checklist for Enterprise Agentic RAG
+# Governance and Human-Oversight Checklist for Trustworthy Enterprise Agentic RAG
 
-This checklist is the operational artifact of TERA's C4 cross-cutting concern. It is anchored in NIST AI 600-1 (Generative AI Profile) [`nist2024genaiprofile`], NIST SP 800-218A (Secure Software Development Practices for Generative AI) [`nist2024ssdfgenai`], OWASP Top 10 for LLM Applications 2025 [`owasp2025llmtop10`], OWASP Top 10 for Agentic Applications [`owasp2025agentictop10`], ISO/IEC 42001:2023 (AI Management System) [`iso420012023`], and the CSA AI Controls Matrix [`csa2025aicm`].
+This 32-control checklist (G1-G32) operationalizes Section 8 of
+*Trustworthy Agentic RAG for Enterprise AI* (Nageshwaran, IEEE Access
+2026). Each control specifies a control objective, an implementation
+pattern, the evidence artifact required for audit, the residual risk
+that remains after the control is in place, and the anchor reference
+among the standards documents inventoried in §8.1.
 
-Each control specifies its objective, an implementation pattern, the evidence artifact required for audit, the residual risk that remains after the control is in place, and the anchor reference. The 32 controls below are designed to be cited individually by row ID (e.g., "G15") in compliance documents and successor research.
+The checklist is **compositional**: a deployment is admissible at a
+given (autonomy, risk, governance) coordinate if and only if the
+corresponding subset of these 32 controls is implemented with current
+evidence artifacts. The mapping from coordinate to control subset is
+specified in §8.1-§8.9 of the article.
 
-## Strategy and Risk
-
-**G1 — Risk classification per use case.** *Objective.* Every deployed agentic-RAG use case has a documented risk tier from Section 4 Dimension 7. *Implementation.* Risk classification matrix mapped to NIST AI 600-1 risk areas and EU AI Act tier. *Evidence.* Signed risk register. *Residual risk.* Mis-classification on edge cases. *Anchor.* `nist2024genaiprofile`, `euaiact2024`.
-
-**G2 — AI inventory and ownership.** *Objective.* Every agent, retriever, tool, and memory store has a named owner. *Implementation.* AI asset inventory linked to IAM identities. *Evidence.* Inventory report with named owners and last-review date. *Residual risk.* Stale ownership after personnel changes. *Anchor.* `iso420012023`.
-
-## Data and Knowledge (TERA L1)
-
-**G3 — Source provenance.** *Objective.* Every corpus source can be traced from chunk to citation. *Implementation.* Source manifest with content hashing and ingestion-time signature. *Evidence.* Signed manifest per ingestion run. *Residual risk.* Provenance forgery from a compromised upstream source. *Anchor.* `niu2024ragtruth`.
-
-**G4 — PII scanning at ingestion.** *Objective.* PII is identified and either redacted, encrypted, or excluded from the corpus per data-classification policy. *Implementation.* Scanner + redaction pipeline integrated into ingestion. *Evidence.* Scan log with redaction counts per source. *Residual risk.* PII leakage through generated summaries even when input is clean. *Anchor.* OWASP LLM02 `owasp2025llmtop10`.
-
-**G5 — Retention and deletion.** *Objective.* Source documents and embeddings honor retention policy and DSAR / RTBF deletion requests. *Implementation.* Retention metadata on each chunk and embedding; deletion APIs. *Evidence.* Retention audit; deletion-request log. *Residual risk.* Delayed propagation to derived caches and replicas. *Anchor.* GDPR Art. 17; EU AI Act `euaiact2024`.
-
-## Retrieval (TERA L2)
-
-**G6 — Retrieval-quality SLO.** *Objective.* Retrieval quality (NDCG, recall, retrieval-quality `salemi2024evalretrieval`) meets a documented SLO before deployment. *Implementation.* Eval harness in CI. *Evidence.* Continuous eval report per build. *Residual risk.* Drift between deployments. *Anchor.* `salemi2024evalretrieval`.
-
-**G7 — Faithfulness SLO.** *Objective.* RAG faithfulness ≥ X measured by RAGAS / ARES / SYNCHECK before production promotion. *Implementation.* Per-build eval gates. *Evidence.* Faithfulness report; drift dashboard. *Residual risk.* 57% of attributions can lack faithfulness even when correctness is high. *Anchor.* `esragas2024`, `saadfalcon2024ares`, `wu2024synccheck`, `wallat2025correctnessfaithfulness`.
-
-## Reasoning and Planning (TERA L3)
-
-**G8 — Plan-trace audit.** *Objective.* The agent's plan-of-actions is captured for every consequential request. *Implementation.* Structured plan log with reasoning trace. *Evidence.* Plan log retention. *Residual risk.* Plan obfuscation by adversarial inputs. *Anchor.* `liu2024agentbench`.
-
-**G9 — Multi-turn safety calibration.** *Objective.* The system resists multi-turn jailbreak and prompt-injection escalation. *Implementation.* Conversation-safety classifier; refusal calibration. *Evidence.* Red-team report (HarmBench / Crescendo / TwinBreak coverage). *Residual risk.* Long-context defense gaps. *Anchor.* `russinovich2025crescendo`, `krauss2025twinbreak`, `mazeika2024harmbench`.
-
-## Tools and Actions (TERA L4)
-
-**G10 — Tool ACLs per agent identity.** *Objective.* Each agent has the minimum tool set needed for its role. *Implementation.* Per-agent IAM role with scoped credentials. *Evidence.* IAM diff and review log. *Residual risk.* Privilege creep. *Anchor.* `csa2025aicm`.
-
-**G11 — Tool input/output validation.** *Objective.* Every tool call's inputs and outputs are validated against schema. *Implementation.* Schema validators plus StruQ-style structured queries. *Evidence.* Validation log with reject reasons. *Residual risk.* Encoded bypass. *Anchor.* `chen2025struq`.
-
-**G12 — Tool provenance.** *Objective.* Tool definitions and code are provenance-pinned and signed. *Implementation.* Hash-pinned tool registry; SBOM. *Evidence.* Tool registry diff; SBOM per release. *Residual risk.* ToolHijacker via malicious tool-doc injection. *Anchor.* `shi2026toolhijacker`, `dong2025philosophersstone`.
-
-## Memory (TERA L3)
-
-**G13 — Memory write authorization.** *Objective.* Only authorized agents and processes can write to long-term memory. *Implementation.* Memory ACL with per-write authentication. *Evidence.* Memory write log. *Residual risk.* Cross-session contamination. *Anchor.* `chen2024agentpoison`.
-
-**G14 — Memory provenance and lineage.** *Objective.* Every memory entry is tagged with its source agent, source action, and time. *Implementation.* Source-tagged entries; lineage graph. *Evidence.* Lineage export. *Residual risk.* Tag stripping by an attacker. *Anchor.* `memorygraft2025`, `memorypoisoning2026arxiv`.
-
-## Human-in-the-Loop (TERA C4)
-
-**G15 — Risk-tiered HITL checkpoints.** *Objective.* Higher risk tiers require human approval before action. *Implementation.* Tiered approval gates; cryptographic sign-off. *Evidence.* Approval log per action. *Residual risk.* Approval fatigue at high escalation rate. *Anchor.* `hitl2025entropy` (10–15% escalation rate is a citable design heuristic).
-
-**G16 — Escalation SLO.** *Objective.* Escalations from autonomous to human review meet a documented SLO. *Implementation.* Routing rules with queues. *Evidence.* Escalation telemetry. *Residual risk.* Quiet auto-approval when humans are unavailable. *Anchor.* OWASP Agentic LLM06 `owasp2025agentictop10`.
-
-## Security (TERA C1)
-
-**G17 — Per-release threat model.** *Objective.* Each release is mapped to the TERA threat-to-control matrix; new threats trigger review. *Implementation.* Threat-modeling artifact per release. *Evidence.* Threat-model document. *Residual risk.* Drift from threat model in production. *Anchor.* `aiagentsthreat2025acm`.
-
-**G18 — Red-team evaluation.** *Objective.* Agent system passes a red-team evaluation suite covering at least HarmBench, Agent Security Bench, AgentDojo, AILuminate. *Implementation.* Automated red-team in CI; manual red-team pre-major release. *Evidence.* Red-team report with pass/fail per test. *Residual risk.* Coverage gap on novel attack classes. *Anchor.* `mazeika2024harmbench`, `zhang2025agentsecuritybench`, `debenedetti2024agentdojo`, `ailuminate2025`.
-
-**G19 — Prompt-injection detection at runtime.** *Objective.* Production traffic is monitored for prompt-injection attempts. *Implementation.* DataSentinel or PromptShield (or equivalent) at the LLM gateway. *Evidence.* Detection log with alert rate and human-confirmed precision. *Residual risk.* High-FPR cost; novel injection patterns. *Anchor.* `datasentinel2025sp`, `jacob2025promptshield`, `promptlocate2026sp`.
-
-## Privacy and Cloud Isolation (TERA L0)
-
-**G20 — Cross-tenant cache isolation.** *Objective.* No tenant's prompt or response is exposed via shared infrastructure caches (KV cache, retrieval cache, or output cache). *Implementation.* Per-tenant cache namespace; isolation tests. *Evidence.* Isolation test results. *Residual risk.* PROMPTPEEK-class side-channel attacks even with isolation. *Anchor.* `wu2025promptpeek`, `nist2024ssdfgenai`.
-
-**G21 — Embedding-store privacy.** *Objective.* Embedding stores resist embedding-inversion attacks where required by data classification. *Implementation.* Encrypted embeddings; vector-store ACLs. *Evidence.* Inversion-resistance test. *Residual risk.* Embedding inversion still feasible against unencrypted stores. *Anchor.* `embeddinginversion2024arxiv`, `transferableinversion2024`.
-
-## Multi-Agent Governance (TERA L5)
-
-**G22 — Inter-agent message audit.** *Objective.* Every agent-to-agent message is logged. *Implementation.* Message log with role and content. *Evidence.* Message log retention. *Residual risk.* Steganographic collusion via plain text. *Anchor.* `motwani2024secretcollusion`.
-
-**G23 — Role policy enforcement.** *Objective.* Each agent operates only within its declared role. *Implementation.* Role validators; role-fidelity monitoring. *Evidence.* Role-fidelity report. *Residual risk.* Role drift over time. *Anchor.* `qian2024chatdev`.
-
-## Operations and CI/CD (TERA C5)
-
-**G24 — Versioned deploys with eval-gated promotion.** *Objective.* No deploy reaches production without passing eval gates. *Implementation.* GitOps with eval-gated promotion. *Evidence.* Deploy manifest. *Residual risk.* Bad rollback if rollback target was previously degraded. *Anchor.* `llmcicdenterprise2025ieee`.
-
-**G25 — Drift detection.** *Objective.* Embedding, retrieval, plan, and action distributions are monitored. *Implementation.* Distribution monitors with alerting. *Evidence.* Drift report. *Residual risk.* Slow drift below alert threshold. *Anchor.* `mdpi2025mlopstoLlmops`, `llmopsreview2025`.
-
-**G26 — Cost SLO per agent.** *Objective.* Agent cost per task is monitored and bounded. *Implementation.* Token budget per agent; circuit breakers. *Evidence.* Cost-per-task report. *Residual risk.* Hidden cost growth from longer agent loops. *Anchor.* `mohammadi2025agenteval`.
-
-## Audit and Accountability
-
-**G27 — Append-only event store.** *Objective.* All consequential events are written to an immutable, signed event log. *Implementation.* WORM storage with cryptographic chaining. *Evidence.* Audit-chain export. *Residual risk.* Schema evolution can break consumers. *Anchor.* `nist2024genaiprofile`.
-
-**G28 — End-to-end tracing.** *Objective.* Each user request can be traced through retrieval, planning, tool calls, and outcome. *Implementation.* OpenTelemetry GenAI semantic conventions. *Evidence.* Sampled trace export. *Residual risk.* Sampling loss on tail traffic. *Anchor.* `otel2024genai`.
-
-## Compliance and Disclosure
-
-**G29 — Mapping to controls framework.** *Objective.* Implemented controls map to a recognized framework (AICM, ISO 42001 Annex A, NIST AI RMF). *Implementation.* Control register. *Evidence.* Mapping report. *Residual risk.* Mapping staleness. *Anchor.* `csa2025aicm`, `iso420012023`.
-
-**G30 — End-user disclosure.** *Objective.* Users are informed when interacting with an agent. *Implementation.* UI badge and documentation. *Evidence.* UX evidence. *Residual risk.* Disclosure clarity for embedded agents. *Anchor.* EU AI Act Art. 50 `euaiact2024`.
-
-## Reproducibility
-
-**G31 — Pinned dependencies and frozen eval sets.** *Objective.* Models, retrievers, tool versions, and eval sets are pinned per release. *Implementation.* Lockfiles; immutable container images; eval-set hashes. *Evidence.* Image digest and eval-set hash per release. *Residual risk.* Live-call non-determinism from external models. *Anchor.* `llmopsreview2025`, `tamber2025faithevolving`.
-
-## Continuous Improvement and AI-Use Disclosure
-
-**G32 — Post-incident review and AI-use disclosure for publications.** *Objective.* Incidents prompt a blameless review, and any AI-assisted research output carries an explicit AI-use disclosure. *Implementation.* PIR template; per-publication disclosure statement. *Evidence.* PIR document; signed disclosure. *Residual risk.* PIR fatigue; incomplete disclosure. *Anchor.* IEEE Access AI-disclosure policy; `nist2024genaiprofile`.
+Controls are anchored in NIST AI 600-1, NIST SP 800-218A, ISO/IEC
+42001:2023, EU AI Act, OWASP Top 10 for LLM Applications (2025),
+OWASP Top 10 for Agentic Applications (December 2025), the Cloud
+Security Alliance AI Controls Matrix, and the CSA NIST AI RMF
+Agentic Profile working draft.
 
 ---
 
-## How to use this checklist
+## Strategy and risk classification
 
-1. **At design time.** For every new agentic-RAG use case, walk the 32 controls and document which apply at the use case's risk tier (Dimension 7).
-2. **At deploy time.** Treat each control's *evidence artifact* as a release gate.
-3. **At audit time.** Map each control's evidence to the relevant section of NIST AI 600-1, ISO/IEC 42001 Annex A, or the CSA AICM.
-4. **In publications and incident reviews.** Cite controls by row ID for traceability.
+### G1 — Documented risk tier per use case
+
+- **Objective.** Every agentic-RAG deployment is classified into a
+  documented risk tier before promotion.
+- **Implementation.** Risk-classification matrix anchored in NIST AI
+  600-1 risk areas and EU AI Act tiers.
+- **Evidence.** Signed risk register entry per deployment.
+- **Residual risk.** Mis-classification.
+- **Anchor.** `nist2024genaiprofile`, `euaiact2024`.
+
+---
+
+## Data and retrieval
+
+### G2 — Source provenance for all corpus content
+
+- **Objective.** Every corpus chunk carries source provenance.
+- **Implementation.** Source manifest plus content hash at ingestion.
+- **Evidence.** Signed manifest, append-only.
+- **Residual risk.** Provenance forgery.
+- **Anchor.** `niu2024ragtruth`.
+
+### G3 — PII scanning at ingestion
+
+- **Objective.** PII is detected and handled per policy at ingestion.
+- **Implementation.** PII scanner with configurable redaction.
+- **Evidence.** Scan log and redaction events.
+- **Residual risk.** PII leakage in downstream summaries.
+- **Anchor.** OWASP LLM02 (sensitive info disclosure).
+
+### G4 — Retrieval-quality service-level objective
+
+- **Objective.** Retrieval quality is monitored against an explicit SLO.
+- **Implementation.** Eval harness in CI; production sampling.
+- **Evidence.** Continuous eval report.
+- **Residual risk.** Drift between deployments.
+- **Anchor.** `salemi2024evalretrieval`.
+
+### G5 — Faithfulness SLO
+
+- **Objective.** Generated outputs meet a named faithfulness SLO.
+- **Implementation.** RAGAS / ARES / SYNCHECK gates pre-deployment;
+  SYNCHECK sampling in production.
+- **Evidence.** Per-build eval report with faithfulness score.
+- **Residual risk.** Citation faithfulness `wallat2025correctnessfaithfulness`.
+- **Anchor.** `esragas2024`, `saadfalcon2024ares`, `wu2024synccheck`.
+
+---
+
+## Reasoning and tool boundaries
+
+### G6 — Plan-trace audit
+
+- **Objective.** Reasoning plans are auditable post-hoc.
+- **Implementation.** Capture plan-of-actions trace per request.
+- **Evidence.** Plan log with correlation ID.
+- **Residual risk.** Plan obfuscation.
+- **Anchor.** `liu2024agentbench`.
+
+### G7 — Tool ACL per agent
+
+- **Objective.** Each agent has the minimum tool surface required for
+  its role.
+- **Implementation.** Per-agent IAM role with tool-scoped permissions.
+- **Evidence.** IAM diff per release.
+- **Residual risk.** Privilege creep over time.
+- **Anchor.** `csa2025aicm`.
+
+### G8 — Tool input/output validators
+
+- **Objective.** Tool calls are validated against schema and against
+  prompt-injection signatures.
+- **Implementation.** OpenAPI schema validation + StruQ structured
+  query.
+- **Evidence.** Validation log; rejection events.
+- **Residual risk.** Encoded bypass not yet captured by validator.
+- **Anchor.** `chen2025struq`.
+
+---
+
+## Memory
+
+### G9 — Memory write authorization
+
+- **Objective.** Writes to long-term memory require authorization.
+- **Implementation.** Memory ACL keyed to agent role and session.
+- **Evidence.** Write log.
+- **Residual risk.** Cross-session contamination.
+- **Anchor.** `chen2024agentpoison`.
+
+### G10 — Memory provenance
+
+- **Objective.** Every memory entry carries provenance.
+- **Implementation.** Source-tagged memory entries; lineage graph.
+- **Evidence.** Lineage graph queryable per entry.
+- **Residual risk.** Tag stripping under adversarial conditions.
+- **Anchor.** `memorygraft2025`.
+
+---
+
+## Human-in-the-loop
+
+### G11 — Risk-tiered checkpoint
+
+- **Objective.** Higher-risk actions require human approval.
+- **Implementation.** Tiered approval gates calibrated to autonomy
+  level and risk class.
+- **Evidence.** Approval evidence with cryptographic sign-off.
+- **Residual risk.** Approval fatigue degrading judgment.
+- **Anchor.** `hitl2025entropy`.
+
+### G12 — Escalation SLO
+
+- **Objective.** Escalation rate is measured and meets an SLO.
+- **Implementation.** Routing and queue with SLA monitoring; mature
+  deployments target a 10–15% escalation rate.
+- **Evidence.** Escalation telemetry.
+- **Residual risk.** Quiet auto-approval.
+- **Anchor.** OWASP Agentic LLM06.
+
+---
+
+## Security
+
+### G13 — Threat model per release
+
+- **Objective.** A current threat model exists for every release.
+- **Implementation.** TERA threat-to-control matrix (article Table V)
+  refreshed per release.
+- **Evidence.** Threat-model document with residual-risk register.
+- **Residual risk.** Drift between threat model and deployed system.
+- **Anchor.** `aiagentsthreat2025acm`.
+
+### G14 — Red-team evaluation
+
+- **Objective.** Every release is challenged with a current
+  red-team suite.
+- **Implementation.** HarmBench, Agent Security Bench, AgentDojo,
+  with domain-specific probes added at higher tiers.
+- **Evidence.** Red-team report.
+- **Residual risk.** Coverage gap against novel attack classes.
+- **Anchor.** `mazeika2024harmbench`, `zhang2025agentsecuritybench`.
+
+### G15 — Prompt-injection detection
+
+- **Objective.** Prompt-injection attempts are detected at the input
+  boundary.
+- **Implementation.** DataSentinel, PromptShield (65.3% TPR at 0.1%
+  FPR), or PromptLocate.
+- **Evidence.** Detection log with FPR/TPR rates per release.
+- **Residual risk.** High-FPR cost on legitimate user prompts.
+- **Anchor.** `datasentinel2025sp`, `jacob2025promptshield`.
+
+---
+
+## Privacy and cloud isolation
+
+### G16 — Cross-tenant isolation
+
+- **Objective.** Multi-tenant infrastructure does not leak across
+  tenants.
+- **Implementation.** Per-tenant cache namespacing; vector-store ACL;
+  KMS-managed keys.
+- **Evidence.** Cross-tenant isolation test report.
+- **Residual risk.** KV-cache leakage `wu2025promptpeek`.
+- **Anchor.** NIST SP 800-218A `nist2024ssdfgenai`.
+
+---
+
+## Multi-agent governance
+
+### G17 — Inter-agent message audit
+
+- **Objective.** Inter-agent communications are logged and
+  monitorable.
+- **Implementation.** Logged communications with content hashing.
+- **Evidence.** Message log; cross-agent trace.
+- **Residual risk.** Steganographic collusion `motwani2024secretcollusion`.
+- **Anchor.** OWASP Agentic Top 10.
+
+### G18 — Role-policy enforcement
+
+- **Objective.** Each agent role is enforced at run-time, not only
+  at design time.
+- **Implementation.** Per-role prompts and validators.
+- **Evidence.** Role-fidelity report.
+- **Residual risk.** Role drift over long sessions.
+- **Anchor.** `qian2024chatdev`.
+
+### G19 — Multi-agent admissibility
+
+- **Objective.** Multi-agent deployments at supervised-action or
+  autonomous-action autonomy levels require strong inter-agent
+  message canaries and conservative role policies until
+  collusion-detection at production scale exists.
+- **Implementation.** Inter-agent canary tokens; conservative role
+  policies.
+- **Evidence.** Canary-detection report.
+- **Residual risk.** Novel collusion patterns not captured by
+  canaries.
+- **Anchor.** `motwani2024secretcollusion`.
+
+---
+
+## Operations
+
+### G20 — Versioned deploys with eval-gated promotion
+
+- **Objective.** Deployments are versioned, evaluated, and reversible.
+- **Implementation.** GitOps with eval-gated promotion; tested
+  rollback runbook.
+- **Evidence.** Deploy manifest with eval contract version.
+- **Residual risk.** Bad rollback under partial-failure conditions.
+- **Anchor.** `llmcicdenterprise2025ieee`.
+
+### G21 — Drift detection
+
+- **Objective.** Embedding, retrieval, faithfulness, and outcome
+  distributions are monitored.
+- **Implementation.** Distribution monitors with calibrated alert
+  thresholds.
+- **Evidence.** Drift report per monitored metric.
+- **Residual risk.** Slow drift below alert threshold.
+- **Anchor.** `llmopsreview2025`.
+
+### G22 — Cost SLO
+
+- **Objective.** Per-agent token cost is measured and bounded.
+- **Implementation.** Token budget per agent at the LLM gateway;
+  cost-shaping policy.
+- **Evidence.** Cost-per-task report.
+- **Residual risk.** Hidden cost growth from tool-call recursion.
+- **Anchor.** `llmopsreview2025`.
+
+---
+
+## Audit
+
+### G23 — Append-only event store
+
+- **Objective.** All consequential events are recorded in an
+  append-only audit store.
+- **Implementation.** WORM storage with cryptographic signing per
+  event.
+- **Evidence.** Audit-chain manifest.
+- **Residual risk.** Schema evolution invalidating older entries.
+- **Anchor.** NIST AI 600-1 `nist2024genaiprofile`.
+
+### G24 — End-to-end trace per request
+
+- **Objective.** Every user request is reconstructable from
+  immutable telemetry.
+- **Implementation.** OpenTelemetry GenAI semantic conventions; per-
+  request correlation ID propagated through every component.
+- **Evidence.** Trace export keyed by correlation ID.
+- **Residual risk.** Sampling loss at high request volume.
+- **Anchor.** `otel2024genai`.
+
+---
+
+## Compliance
+
+### G25 — Mapping to controls framework
+
+- **Objective.** Controls map to the organization's control
+  framework.
+- **Implementation.** AICM mapping to ISO 27001, ISO 42001, NIST AI
+  RMF, BSI AIC4.
+- **Evidence.** Control register with mapping references.
+- **Residual risk.** Mapping staleness as frameworks evolve.
+- **Anchor.** `csa2025aicm`, `iso420012023`.
+
+### G26 — Regulatory classification
+
+- **Objective.** Deployments are classified under applicable
+  regulatory regimes.
+- **Implementation.** EU AI Act tier classification; sector-specific
+  classification for healthcare, finance, etc.
+- **Evidence.** Conformance pack.
+- **Residual risk.** Re-classification trigger on functional
+  changes.
+- **Anchor.** `euaiact2024`.
+
+---
+
+## Vendor and supply chain
+
+### G27 — Model and tool provenance
+
+- **Objective.** Models and tools are pinned and provenance-checked.
+- **Implementation.** SBOM for AI components; signing of pinned
+  artifacts.
+- **Evidence.** SBOM with signatures.
+- **Residual risk.** Trojan plugin `dong2025philosophersstone`.
+- **Anchor.** `nist2024ssdfgenai`.
+
+---
+
+## Incident response
+
+### G28 — IR runbook for agent incident
+
+- **Objective.** Pre-defined runbooks exist for prompt-injection,
+  retrieval-poisoning, tool-misuse, memory-poisoning, and multi-
+  tenant-leak incidents.
+- **Implementation.** Runbook library with contact tree and
+  rollback procedures.
+- **Evidence.** IR records per drill and per incident.
+- **Residual risk.** Novel attack class not yet runbooked.
+- **Anchor.** OWASP Agentic Top 10 `owasp2025agentictop10`.
+
+---
+
+## User-facing transparency
+
+### G29 — Disclosure to end users
+
+- **Objective.** Users are informed when they are interacting with
+  an agentic system.
+- **Implementation.** UI badge, in-product disclosure, documentation.
+- **Evidence.** UX evidence (screenshots, copy decks).
+- **Residual risk.** Disclosure clarity at low salience.
+- **Anchor.** EU AI Act Article 50 `euaiact2024`.
+
+---
+
+## Reproducibility
+
+### G30 — Pinned dependencies
+
+- **Objective.** All deployment dependencies are pinned.
+- **Implementation.** Lockfiles, immutable container images.
+- **Evidence.** Image digests in deployment manifest.
+- **Residual risk.** Live-call non-determinism for hosted models.
+- **Anchor.** `llmopsreview2025`.
+
+### G31 — Evaluation reproducibility
+
+- **Objective.** Eval results are reproducible from a frozen eval
+  set with explicit seeds.
+- **Implementation.** Frozen eval set; recorded seeds; eval-set
+  hash in deployment manifest.
+- **Evidence.** Eval-set hash + seeds.
+- **Residual risk.** Test contamination from hosted-model training
+  exposure.
+- **Anchor.** `tamber2025faithevolving`.
+
+---
+
+## Continuous improvement
+
+### G32 — Post-incident review and AI-use disclosure
+
+- **Objective.** Incidents and AI-use authorship are documented.
+- **Implementation.** Blameless post-incident review for incidents;
+  per-paper / per-system AI-use disclosure for authorship.
+- **Evidence.** PIR document; AI-use disclosure statement.
+- **Residual risk.** PIR fatigue; disclosure-statement boilerplate
+  fatigue.
+- **Anchor.** `nist2024genaiprofile`; IEEE Access AI-use disclosure
+  guidance.
+
+---
+
+## Notes on synthesis status
+
+This checklist is **synthesized**, not empirically validated as a
+release-gating instrument. The individual controls draw on cited
+normative sources (NIST, ISO, OWASP, CSA, EU AI Act) and on
+empirical literature (cited per control). The composition into 32
+controls along the development-and-operations governance loop and
+the autonomy-tier gating is the article's contribution. We
+recommend the checklist as a coordination map and invite empirical
+validation against a controlled deployment baseline.
